@@ -5,7 +5,9 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "FourEqAssembly",
-        "MagicSquareAssembly"
+        "MagicSquareAssembly",
+        "HerraduraAssembly",
+        "HanoiAssembly"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
