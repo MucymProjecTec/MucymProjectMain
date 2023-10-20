@@ -13,6 +13,8 @@ public class UI_Manager4E : MonoBehaviour
 
     public Animator _victoryAnimator;
 
+    public GameObject losePanel;
+
     private Animator _tipAnimator;
 
     void Start()
@@ -21,6 +23,7 @@ public class UI_Manager4E : MonoBehaviour
         //_victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>();
         _tipAnimator = tipPanel.GetComponent<Animator>();
         tipPanel.SetActive(false);
+         losePanel.SetActive(false);
     }
 
     void Update()
@@ -63,6 +66,10 @@ public class UI_Manager4E : MonoBehaviour
         _victoryAnimator.SetBool("ShowVictory", true);
     }
 
+    public void ShowMessage()
+    {
+        losePanel.SetActive(true);
+    }
     public void HideVictoryScreen()
     {
         _victoryAnimator.SetBool("ShowVictory", false);
