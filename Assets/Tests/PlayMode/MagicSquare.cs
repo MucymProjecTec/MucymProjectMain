@@ -11,7 +11,7 @@ public class MagicSquare
     {
         // Arrange
         var gameManager = new GameObject().AddComponent<MagicSquareGameManager>();
-        var replacementNumbers = new GameObject[3];
+        var replacementNumbers = new GameObject[9];
 
         for (int i = 0; i < replacementNumbers.Length; i++)
         {
@@ -36,7 +36,7 @@ public class MagicSquare
     {
         // Arrange
         var gameManager = new GameObject().AddComponent<MagicSquareGameManager>();
-        var replacementNumbers = new GameObject[3];
+        var replacementNumbers = new GameObject[9];
 
         for (int i = 0; i < replacementNumbers.Length; i++)
         {
@@ -61,7 +61,7 @@ public class MagicSquare
     {
         // Arrange
         var gameManager = new GameObject().AddComponent<MagicSquareGameManager>();
-        gameManager.replacementNumbers = new GameObject[3];
+        gameManager.replacementNumbers = new GameObject[9];
         gameManager._numbers = new int[3, 3];
         var number1 = new GameObject();
         var number2 = new GameObject();
@@ -105,7 +105,7 @@ public class MagicSquare
     {
         // Arrange
         var gameManager = new GameObject().AddComponent<MagicSquareGameManager>();
-        gameManager.replacementNumbers = new GameObject[3];
+        gameManager.replacementNumbers = new GameObject[9];
         gameManager._numbers = new int[3, 3];
         var number1 = new GameObject();
         var number2 = new GameObject();
