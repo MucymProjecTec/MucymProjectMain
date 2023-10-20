@@ -6,9 +6,11 @@ public class FourEquationsGameManager : MonoBehaviour
 {
     public GameObject[] replacementNumbers;
 
-    private int[,] _numbers; 
+    public int[,] _numbers; 
 
-    private UI_Manager4E _uiManager4E;
+
+
+    public UI_Manager4E _uiManager4E;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +43,7 @@ public class FourEquationsGameManager : MonoBehaviour
         }
     }
 
-    private bool CheckIfWin()
+    public bool CheckIfWin()
     {
         bool condition1, condition2, condition3, condition4;
         condition1 = false;
@@ -85,42 +87,7 @@ public class FourEquationsGameManager : MonoBehaviour
             _uiManager4E.ShowVictoryScreen();
             _uiManager4E.StopTimer();
         }
-        else if (CheckGameOver())
-        {
-            _uiManager4E.ShowMessage();
             
-        }
-            
-    }
-
-    public bool CheckGameOver()
-    {
-        bool flag = false;
-        int counter = 0;
-        GameObject[] nums = GameObject.FindGameObjectsWithTag("Number");
-        for (int i = 0; i < nums.Length; i++)
-        {
-            Numbers numScript = nums[i].GetComponent<Numbers>();
-            if (numScript.row != 4 && numScript.col != 4)
-            {
-                if (numScript.value == 0) //If there are still clean pieces on the evaluation board: row -> 0,1,2 or col -> 0,1,2
-                    counter++;
-            }
-        }
-
-
-        if (counter == 0)
-        {
-            flag = true;
-        }
-        else
-        {
-            flag = false;
-            _uiManager4E.closeGameOver();
-
-        }
-
-        return flag;
     }
 
     public void RestartGame()
@@ -135,6 +102,7 @@ public class FourEquationsGameManager : MonoBehaviour
         DisableReplacementNumbers();
 
         _uiManager4E.ResetTimer();
-        _uiManager4E.closeGameOver();
     }
+
+    
 }
