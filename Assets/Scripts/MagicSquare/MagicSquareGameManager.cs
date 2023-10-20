@@ -6,9 +6,9 @@ public class MagicSquareGameManager : MonoBehaviour
 {
     public GameObject[] replacementNumbers;
 
-    private int[,] _numbers; 
+    public int[,] _numbers;
 
-    private UI_ManagerMagicSquare _uiManager;
+    public UI_ManagerMagicSquare _uiManager;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class MagicSquareGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void DisableReplacementNumbers()
@@ -40,71 +40,64 @@ public class MagicSquareGameManager : MonoBehaviour
         }
     }
 
-    private bool CheckIfWin()
+    public bool CheckIfWin()
     {
         bool checkColumnSum, checkRowSum, checkDiagonalSum, checkAntiDiagonalSum;
         checkColumnSum = false;
         checkRowSum = false;
         checkDiagonalSum = false;
         checkAntiDiagonalSum = false;
-        /*
-        int sumRows = 0;
-        int sumColumns = 0;
-        int sumDiagonal = 0;
-        int sumAntiDiagonal = 0;
-        */
+
         GameObject[] nums = GameObject.FindGameObjectsWithTag("Number");
         int size = nums.Length;
 
         for (int i = 0; i < nums.Length; i++)
         {
             OptionsNumbers numScript = nums[i].GetComponent<OptionsNumbers>();
-            //Debug.Log("[" + numScript.row + "," + numScript.col + "] = " + numScript.value);
+             Debug.Log("[" + numScript.row + "," + numScript.col + "] = " + numScript.value);
 
             if (numScript.row != 4 && numScript.col != 4)
             {
-                if (numScript.value == 0) //If there are still clean pieces on the evaluation board: row -> 0,1,2 or col -> 0,1,2
+                if (numScript.value == 0) // If there are still clean pieces on the evaluation board: row -> 0,1,2 or col -> 0,1,2
                     return false;
                 else
-                    _numbers[numScript.row, numScript.col] = numScript.value; //Load the value of the piece on it's current position 
+                    _numbers[numScript.row, numScript.col] = numScript.value; // Load the value of the piece in its current position
             }
         }
 
-        if ((_numbers[0, 0] + _numbers[0, 1] + _numbers[0, 2]) == 15)
+        for (int i = 0; i < 3; i++)
         {
-            if ((_numbers[1, 0] + _numbers[1, 1] + _numbers[1, 2]) == 15)
+            // Verificar las filas
+            if ((_numbers[i, 0] + _numbers[i, 1] + _numbers[i, 2]) == 15)
             {
-                if ((_numbers[2, 0] + _numbers[2, 1] + _numbers[2, 2]) == 15)
-                {
-                    checkRowSum = true;
-                }
-      
+                checkRowSum = true;
+                Debug.Log(checkRowSum);
+
+            }
+
+            // Verificar las columnas
+            if ((_numbers[0, i] + _numbers[1, i] + _numbers[2, i]) == 15)
+            {
+                checkColumnSum = true;
+                Debug.Log(checkColumnSum);
+
             }
         }
 
-        if ((_numbers[0, 0] + _numbers[1, 0] + _numbers[2, 0]) == 15)
-        {
-            if ((_numbers[0, 1] + _numbers[1, 1] + _numbers[2, 1]) == 15)
-            {
-                if ((_numbers[0, 2] + _numbers[1, 2] + _numbers[2, 2]) == 15)
-                {
-                    checkColumnSum = true;
-                }
-            }
-        }
-
+        // Verificar las diagonales
         if ((_numbers[0, 0] + _numbers[1, 1] + _numbers[2, 2]) == 15)
         {
             checkDiagonalSum = true;
+            Debug.Log(checkDiagonalSum);
         }
 
-        if ((_numbers[0, 2] + _numbers[1, 1] + _numbers[2, 0] )== 15)
+        if ((_numbers[0, 2] + _numbers[1, 1] + _numbers[2, 0]) == 15)
         {
             checkAntiDiagonalSum = true;
+            Debug.Log(checkAntiDiagonalSum);
         }
 
-   
-            return checkColumnSum && checkRowSum && checkDiagonalSum && checkAntiDiagonalSum;
+        return checkColumnSum || checkRowSum || checkDiagonalSum || checkAntiDiagonalSum;
     }
 
     public void CheckLastMovement()
@@ -114,7 +107,7 @@ public class MagicSquareGameManager : MonoBehaviour
             _uiManager.ShowVictoryScreen();
             _uiManager.StopTimer();
         }
-            
+
     }
 
     public void RestartGame()
