@@ -116,6 +116,8 @@ public class FourEquationsGameManager : MonoBehaviour
         else
         {
             flag = false;
+            _uiManager4E.closeGameOver();
+
         }
 
         return flag;
@@ -133,5 +135,6 @@ public class FourEquationsGameManager : MonoBehaviour
         DisableReplacementNumbers();
 
         _uiManager4E.ResetTimer();
+        _uiManager4E.closeGameOver();
     }
 }

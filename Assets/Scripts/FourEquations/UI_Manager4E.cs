@@ -13,6 +13,9 @@ public class UI_Manager4E : MonoBehaviour
 
     public Animator _victoryAnimator;
 
+    public AudioSource winnerAudio;
+    public AudioSource loserAudio;
+
     public GameObject losePanel;
 
     private Animator _tipAnimator;
@@ -63,16 +66,24 @@ public class UI_Manager4E : MonoBehaviour
     public void ShowVictoryScreen()
     {
         //Debug.Log("YOU WON!");
+        winnerAudio.Play();
         _victoryAnimator.SetBool("ShowVictory", true);
     }
 
     public void ShowMessage()
     {
+        loserAudio.Play();
         losePanel.SetActive(true);
     }
+    public void closeGameOver()
+    {
+        losePanel.SetActive(false);
+    }
+
     public void HideVictoryScreen()
     {
         _victoryAnimator.SetBool("ShowVictory", false);
+
     }
 
     public void ActivateTip()
