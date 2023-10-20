@@ -6,7 +6,7 @@ public class AllSumsGameManager : MonoBehaviour
 {
     public GameObject[] replacementNumbers;
 
-    private int[,] _numbers;
+    public int[,] _numbers;
 
     public GameObject pivot;
 
@@ -50,7 +50,7 @@ public class AllSumsGameManager : MonoBehaviour
 
 
     
-    private bool CheckIfWin()
+    public bool CheckIfWin()
     {
         bool flag = false;
 
