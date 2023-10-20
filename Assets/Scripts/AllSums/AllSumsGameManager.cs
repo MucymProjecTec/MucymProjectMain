@@ -18,7 +18,6 @@ public class AllSumsGameManager : MonoBehaviour
         DisableReplacementNumbers();
         _numbers = new int[5, 2];
         _uiManager = GameObject.Find("Canvas").GetComponent<UI_ManagerAllSums>();
-        Debug.Log("Me cago en la puta");
     }
 
     // Update is called once per frame

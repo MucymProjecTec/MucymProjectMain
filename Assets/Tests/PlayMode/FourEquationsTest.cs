@@ -12,7 +12,7 @@ public class FourEquationsTest
     {
         // Arrange
         var gameManager = new GameObject().AddComponent<FourEquationsGameManager>();
-        var replacementNumbers = new GameObject[3];
+        var replacementNumbers = new GameObject[9];
 
         for (int i = 0; i < replacementNumbers.Length; i++)
         {
@@ -38,7 +38,7 @@ public class FourEquationsTest
     {
         // Arrange
         var gameManager = new GameObject().AddComponent<FourEquationsGameManager>();
-        var replacementNumbers = new GameObject[3];
+        var replacementNumbers = new GameObject[9];
 
         for (int i = 0; i < replacementNumbers.Length; i++)
         {

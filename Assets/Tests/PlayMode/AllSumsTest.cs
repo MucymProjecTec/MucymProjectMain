@@ -6,82 +6,106 @@ using UnityEngine.TestTools;
 
 public class AllsumsTest
 {
-       [Test]
+    [Test]
     public void DisableReplacementNumbers_DisablesPivotAndReplacementNumbers()
     {
-        // Arrange
-        var gameManagerObject = new GameObject();
-        var gameManager = gameManagerObject.AddComponent<AllSumsGameManager>();
+        var gameManager = new GameObject().AddComponent<AllSumsGameManager>();
+        var replacementNumbers = new GameObject[10];
         var pivot = new GameObject();
-        var replacementNumbers = new GameObject[3];
-
         gameManager.pivot = pivot;
+
+        pivot.SetActive(true);
+ 
+
+        for (int i = 0; i < replacementNumbers.Length; i++)
+        {
+            replacementNumbers[i] = new GameObject();
+            replacementNumbers[i].SetActive(true);
+        }
+
+
         gameManager.replacementNumbers = replacementNumbers;
 
-        // Act
         gameManager.DisableReplacementNumbers();
 
-        // Assert
         Assert.IsFalse(pivot.activeSelf);
+        // Assert
         foreach (var replacementNumber in replacementNumbers)
         {
             Assert.IsFalse(replacementNumber.activeSelf);
         }
+
     }
+
+
+
+
 
     [Test]
     public void EnableReplacementNumbers_EnablesPivotAndReplacementNumbers()
     {
-        // Arrange
+
         var gameManager = new GameObject().AddComponent<AllSumsGameManager>();
+        var replacementNumbers = new GameObject[10];
         var pivot = new GameObject();
-        var replacementNumbers = new GameObject[3];
+        gameManager.pivot = pivot;
 
         pivot.SetActive(false);
-        foreach (var replacementNumber in replacementNumbers)
+
+        for (int i = 0; i < replacementNumbers.Length; i++)
         {
-            replacementNumber.SetActive(false);
+            replacementNumbers[i] = new GameObject();
+            replacementNumbers[i].SetActive(false);
         }
 
-        gameManager.pivot = pivot;
         gameManager.replacementNumbers = replacementNumbers;
 
         // Act
         gameManager.EnableReplacementNumbers();
 
-        // Assert
         Assert.IsTrue(pivot.activeSelf);
+        // Assert
         foreach (var replacementNumber in replacementNumbers)
         {
             Assert.IsTrue(replacementNumber.activeSelf);
         }
     }
+
+
+
+
+
 [Test]
 public void CheckIfWin_ReturnsTrueForWinningConditions()
+
 {
     // Arrange
     var gameManagerObject = new GameObject();
     var gameManager = gameManagerObject.AddComponent<AllSumsGameManager>();
 
-    // Simula un escenario de victoria estableciendo valores necesarios
+    // Simulate a scenario of victory by setting the necessary values
     gameManager.pivot = new GameObject();
     gameManager.replacementNumbers = new GameObject[3];
 
-    // Simula un escenario donde todos los números cumplen las condiciones de victoria
+    // Initialize replacementNumbers with GameObjects
     for (int i = 0; i < gameManager.replacementNumbers.Length; i++)
     {
         gameManager.replacementNumbers[i] = new GameObject();
     }
 
-    // Simula un escenario donde _numbers tiene valores que cumplen las condiciones de victoria
+    // Initialize _numbers with values that meet the victory conditions
     gameManager._numbers = new int[5, 2]
     {
-        {1, 2},
-        {3, 4},
-        {5, 6},
-        {7, 8},
-        {9, 10}
+        { 1, 11 },
+        { 2, 10 },
+        { 3, 9 },
+        { 4, 8 },
+        { 5, 7 }
     };
+
+    // Set the pivot value (assuming it's a component of the pivot GameObject)
+    var pivotNumbersAllSums = gameManager.pivot.AddComponent<NumbersAllSums>();
+    pivotNumbersAllSums.value = 6;
 
     // Act
     var result = gameManager.CheckIfWin();
@@ -92,30 +116,38 @@ public void CheckIfWin_ReturnsTrueForWinningConditions()
 [Test]
 public void CheckIfWin_ReturnsFalseForLosingConditions()
 {
-    // Arrange
-    var gameManager = new GameObject().AddComponent<AllSumsGameManager>();
+        // Arrange
+        var gameManagerObject = new GameObject();
+        var gameManager = gameManagerObject.AddComponent<AllSumsGameManager>();
 
-    // Simular una situación de derrota:
-    // Configura _numbers con los valores adecuados para una derrota.
-    // Asegúrate de que gameManager.pivot y replacementNumbers estén configurados correctamente.
+        // Simulate a scenario where the conditions for victory are not met
+        gameManager.pivot = new GameObject();
+        gameManager.replacementNumbers = new GameObject[3];
 
-    // Por ejemplo, configura _numbers y otros componentes para una situación de derrota:
-    gameManager.pivot = new GameObject();
-    gameManager.replacementNumbers = new GameObject[3];
+        // Initialize replacementNumbers with GameObjects
+        for (int i = 0; i < gameManager.replacementNumbers.Length; i++)
+        {
+            gameManager.replacementNumbers[i] = new GameObject();
+        }
 
-    // Configura _numbers para que no cumpla con la condición de victoria.
-    // Aquí se configuran valores arbitrarios a modo de ejemplo que no cumplen con la condición de victoria.
-    gameManager._numbers[0, 0] = 5;
-    gameManager._numbers[0, 1] = 3;
-    gameManager._numbers[1, 0] = 2;
-    gameManager._numbers[1, 1] = 7; // Este valor no cumple con la condición de derrota.
+        // Initialize _numbers with values that do not meet the victory conditions
+        gameManager._numbers = new int[5, 2]
+        {
+        { 1, 11 },
+        { 2, 10 },
+        { 3, 9 },
+        { 4, 8 },
+        { 6, 7 }
+        };
 
-    // ...
+        // Set the pivot value to a value that won't result in a win
+        var pivotNumbersAllSums = gameManager.pivot.AddComponent<NumbersAllSums>();
+        pivotNumbersAllSums.value = 5; // This value doesn't meet the win condition
 
-    // Act
-    var result = gameManager.CheckIfWin();
+        // Act
+        var result = gameManager.CheckIfWin();
 
-    // Assert
-    Assert.IsFalse(result);
-}
+        // Assert
+        Assert.IsFalse(result); // We expect the result to be false
+    }
 }
