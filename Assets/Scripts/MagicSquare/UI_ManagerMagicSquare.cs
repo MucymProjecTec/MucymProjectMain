@@ -12,14 +12,18 @@ public class UI_ManagerMagicSquare : MonoBehaviour
     public GameObject tipPanel;
 
     public Animator _victoryAnimator;
+    public GameObject losePanel;
 
     private Animator _tipAnimator;
+
 
     void Start()
     {
         timerLabel.text = "Tiempo\n0:00";
         _tipAnimator = tipPanel.GetComponent<Animator>();
         tipPanel.SetActive(false);
+        losePanel.SetActive(false);
+
     }
 
     void Update()
