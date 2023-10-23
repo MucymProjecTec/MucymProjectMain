@@ -8,9 +8,9 @@ public class Algorithm : MonoBehaviour
     public string name;
     public AudioSource audio;
     public AudioSource audioFelicidades;
-    private string [] valores;
-    private Animator _victoryAnimator;
-    private Animator animacion;
+    public string [] valores;
+    public Animator _victoryAnimator;
+    public Animator animacion;
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class Algorithm : MonoBehaviour
         valores = createArray.getArray();
     }
 
-    private int returnEmptySpace()
+    public int returnEmptySpace()
     {
         Debug.Log("Cont: " + valores.Length);
         for (int i = 0; i < valores.Length; i++)
@@ -34,7 +34,7 @@ public class Algorithm : MonoBehaviour
         return -1;
     }
 
-    private int returnBallIndex(string name)
+    public int returnBallIndex(string name)
     {
         for (int i = 0; i < valores.Length; i++)
         {
@@ -46,7 +46,7 @@ public class Algorithm : MonoBehaviour
         return -1;
     }
 
-    private bool moveBall(string name)
+    public bool moveBall(string name)
     {
         audio.Play();
         int indexBallV = returnBallIndex(name);
@@ -65,7 +65,7 @@ public class Algorithm : MonoBehaviour
         return false;
     }
 
-    private bool condition1B(string name)
+    public bool condition1B(string name)
     {
         if (returnBallIndex(name) == 0)
         {
@@ -142,7 +142,7 @@ public class Algorithm : MonoBehaviour
         return false;
     }
 
-    private bool condition2B(string name)
+    public bool condition2B(string name)
     {
         if (returnBallIndex(name) == 1)
         {
@@ -219,7 +219,7 @@ public class Algorithm : MonoBehaviour
         return false;
     }
 
-    private bool condition3B(string name)
+    public bool condition3B(string name)
     {
         if (returnBallIndex(name) == 2)
         {
@@ -278,7 +278,7 @@ public class Algorithm : MonoBehaviour
         return false;
     }
 
-    private bool condition4R(string name)
+    public bool condition4R(string name)
     {
         if (returnBallIndex(name) == 4)
         {
@@ -337,7 +337,7 @@ public class Algorithm : MonoBehaviour
         return false;
     }
 
-    private bool condition5R(string name)
+    public bool condition5R(string name)
     {
         if (returnBallIndex(name) == 5)
         {
@@ -414,7 +414,7 @@ public class Algorithm : MonoBehaviour
         return false;
     }
 
-    private bool condition6R(string name)
+    public bool condition6R(string name)
     {
         if (returnBallIndex(name) == 6)
         {
@@ -491,7 +491,7 @@ public class Algorithm : MonoBehaviour
         return false;
     }
 
-    private void IsWinner()
+    public void IsWinner()
     {
         if (valores[0].Equals("Sphere4") && valores[1].Equals("Sphere5") && valores[2].Equals("Sphere6") && 
             valores[4].Equals("Sphere1") && valores[5].Equals("Sphere2") && valores[6].Equals("Sphere3"))
@@ -500,7 +500,7 @@ public class Algorithm : MonoBehaviour
         }
     }
     
-    private void ShowVictoryScreen()
+    public void ShowVictoryScreen()
     {
         _victoryAnimator.SetBool("ShowVictory", true);
         audioFelicidades.Play();
