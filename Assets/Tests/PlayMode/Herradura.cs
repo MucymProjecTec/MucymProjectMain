@@ -6,20 +6,69 @@ using UnityEngine.TestTools;
 
 public class Herradura
 {
-    // A Test behaves as an ordinary method
     [Test]
-    public void HerraduraSimplePasses()
+    public void ReturnEmptySpace_ReturnsCorrectIndexForEmptySpace()
     {
-        // Use the Assert class to test conditions
+        // Arrange
+        GameObject myHoof = new GameObject("MyHoof");
+        Algorithm algorithm = myHoof.AddComponent<Algorithm>();
+        algorithm.valores = new string[] { "Ball1", "null", "Ball2", "null", "Ball3" };
+        int expectedIndex = 1;
+
+        // Act
+        int result = algorithm.returnEmptySpace();
+
+        // Assert
+        Assert.AreEqual(expectedIndex, result);
     }
 
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator HerraduraWithEnumeratorPasses()
+    [Test]
+    public void ReturnEmptySpace_ReturnsMinusOneWhenNoEmptySpace()
     {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
+        // Arrange
+        GameObject myHoof = new GameObject("MyHoof");
+        Algorithm algorithm = myHoof.AddComponent<Algorithm>();
+        algorithm.valores = new string[] { "Ball1", "Ball2", "Ball3" };
+
+        // Act
+        int result = algorithm.returnEmptySpace();
+
+        // Assert
+        Assert.AreEqual(-1, result);
     }
+
+    [Test]
+    public void ReturnBallIndex_ReturnsCorrectIndexForExistingBall()
+    {
+        // Arrange
+        GameObject myHoof = new GameObject("MyHoof");
+        Algorithm algorithm = myHoof.AddComponent<Algorithm>();
+        algorithm.valores = new string[] { "Ball1", "null", "Ball2", "null", "Ball3" };
+        string ballName = "Ball2";
+        int expectedIndex = 2;
+
+        // Act
+        int result = algorithm.returnBallIndex(ballName);
+
+        // Assert
+        Assert.AreEqual(expectedIndex, result);
+    }
+
+    [Test]
+    public void ReturnBallIndex_ReturnsMinusOneForNonExistingBall()
+    {
+        // Arrange
+        GameObject myHoof = new GameObject("MyHoof");
+        Algorithm algorithm = myHoof.AddComponent<Algorithm>();
+        algorithm.valores = new string[] { "Ball1", "null", "Ball2", "null", "Ball3" };
+        string nonExistentBallName = "NonExistentBall";
+
+        // Act
+        int result = algorithm.returnBallIndex(nonExistentBallName);
+
+        // Assert
+        Assert.AreEqual(-1, result);
+    }
+
+
 }
