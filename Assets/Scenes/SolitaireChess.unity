@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -589,8 +589,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnoText: {fileID: 723737780}
-  colorText: {fileID: 0}
-  spriteRenderer: {fileID: 1972446801}
 --- !u!1 &170116502
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +702,9 @@ MonoBehaviour:
   name: Sphere3
   audio: {fileID: 1391795008}
   audioFelicidades: {fileID: 1928209550}
+  valores: []
+  _victoryAnimator: {fileID: 0}
+  animacion: {fileID: 0}
 --- !u!114 &179537827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1595,6 +1596,9 @@ MonoBehaviour:
   name: Sphere5
   audio: {fileID: 1391795008}
   audioFelicidades: {fileID: 1928209550}
+  valores: []
+  _victoryAnimator: {fileID: 0}
+  animacion: {fileID: 0}
 --- !u!114 &576622776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2315,6 +2319,9 @@ MonoBehaviour:
   startTimer: 0
   tipPanel: {fileID: 0}
   _victoryAnimator: {fileID: 0}
+  winnerAudio: {fileID: 0}
+  loserAudio: {fileID: 0}
+  losePanel: {fileID: 0}
 --- !u!114 &752008111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3072,11 +3079,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5267412646615438082, guid: 8d2943710381d3b478dd6ca09ab1bb0d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1160.5231
+      value: -390.4
       objectReference: {fileID: 0}
     - target: {fileID: 5267412646615438082, guid: 8d2943710381d3b478dd6ca09ab1bb0d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 133.67249
+      value: 391.2
       objectReference: {fileID: 0}
     - target: {fileID: 5267412646615438082, guid: 8d2943710381d3b478dd6ca09ab1bb0d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3183,6 +3190,9 @@ MonoBehaviour:
   name: Sphere4
   audio: {fileID: 1391795008}
   audioFelicidades: {fileID: 1928209550}
+  valores: []
+  _victoryAnimator: {fileID: 0}
+  animacion: {fileID: 0}
 --- !u!114 &986167167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4210,6 +4220,9 @@ MonoBehaviour:
   name: Sphere1
   audio: {fileID: 1391795008}
   audioFelicidades: {fileID: 1928209550}
+  valores: []
+  _victoryAnimator: {fileID: 0}
+  animacion: {fileID: 0}
 --- !u!95 &1281222112
 Animator:
   serializedVersion: 5
@@ -5894,6 +5907,9 @@ MonoBehaviour:
   name: Sphere6
   audio: {fileID: 1391795008}
   audioFelicidades: {fileID: 1928209550}
+  valores: []
+  _victoryAnimator: {fileID: 0}
+  animacion: {fileID: 0}
 --- !u!114 &1876170672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6489,6 +6505,9 @@ MonoBehaviour:
   name: Sphere2
   audio: {fileID: 1391795008}
   audioFelicidades: {fileID: 1928209550}
+  valores: []
+  _victoryAnimator: {fileID: 0}
+  animacion: {fileID: 0}
 --- !u!114 &1948877847
 MonoBehaviour:
   m_ObjectHideFlags: 0

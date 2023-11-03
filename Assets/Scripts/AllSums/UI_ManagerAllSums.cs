@@ -11,6 +11,9 @@ public class UI_ManagerAllSums : MonoBehaviour
     public GameObject tipPanel;
 
     public Animator _victoryAnimator;
+    public AudioSource winnerAudio;
+    public GameObject losePanel;
+    public AudioSource loserAudio;
 
     private Animator _tipAnimator;
 

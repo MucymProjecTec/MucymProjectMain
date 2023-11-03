@@ -2868,7 +2868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &593063219
 Transform:
   m_ObjectHideFlags: 0
@@ -6515,6 +6515,9 @@ MonoBehaviour:
   startTimer: 0
   tipPanel: {fileID: 1960027366}
   _victoryAnimator: {fileID: 2130372510}
+  winnerAudio: {fileID: 0}
+  loserAudio: {fileID: 0}
+  losePanel: {fileID: 0}
 --- !u!114 &1380251748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10903,11 +10906,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5267412646615438082, guid: 8d2943710381d3b478dd6ca09ab1bb0d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -403.24
+      value: -392
       objectReference: {fileID: 0}
     - target: {fileID: 5267412646615438082, guid: 8d2943710381d3b478dd6ca09ab1bb0d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 45.7
+      value: 390
       objectReference: {fileID: 0}
     - target: {fileID: 5267412646615438082, guid: 8d2943710381d3b478dd6ca09ab1bb0d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

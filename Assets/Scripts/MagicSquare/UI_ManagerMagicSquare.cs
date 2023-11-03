@@ -13,6 +13,8 @@ public class UI_ManagerMagicSquare : MonoBehaviour
 
     public Animator _victoryAnimator;
     public GameObject losePanel;
+    public AudioSource winnerAudio;
+    public AudioSource loserAudio;
 
     private Animator _tipAnimator;
 
