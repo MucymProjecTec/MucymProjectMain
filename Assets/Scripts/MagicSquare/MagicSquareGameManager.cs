@@ -106,6 +106,7 @@ public class MagicSquareGameManager : MonoBehaviour
         {
             _uiManager.ShowVictoryScreen();
             _uiManager.StopTimer();
+           
         }
 
     }

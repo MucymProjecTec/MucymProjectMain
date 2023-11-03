@@ -63,11 +63,23 @@ public class UI_ManagerAllSums : MonoBehaviour
     {
         //Debug.Log("YOU WON!");
         _victoryAnimator.SetBool("ShowVictory", true);
+        winnerAudio.Play();
     }
 
     public void HideVictoryScreen()
     {
         _victoryAnimator.SetBool("ShowVictory", false);
+    }
+
+    public void ShowGameOver()
+    {
+        loserAudio.Play();
+        losePanel.SetActive(true);
+    }
+    public void closeGameOver()
+    {
+        loserAudio.Stop();
+        losePanel.SetActive(false);
     }
 
     public void ActivateTip()

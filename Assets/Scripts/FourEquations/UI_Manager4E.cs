@@ -70,13 +70,14 @@ public class UI_Manager4E : MonoBehaviour
         _victoryAnimator.SetBool("ShowVictory", true);
     }
 
-    public void ShowMessage()
+    public void ShowGameOver()
     {
         loserAudio.Play();
         losePanel.SetActive(true);
     }
     public void closeGameOver()
     {
+        loserAudio.Stop();
         losePanel.SetActive(false);
     }
 

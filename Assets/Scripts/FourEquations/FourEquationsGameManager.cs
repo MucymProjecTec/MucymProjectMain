@@ -8,10 +8,8 @@ public class FourEquationsGameManager : MonoBehaviour
 
     public int[,] _numbers; 
 
-
-
     public UI_Manager4E _uiManager4E;
-
+    bool flagOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,12 +80,63 @@ public class FourEquationsGameManager : MonoBehaviour
 
     public void CheckLastMovement()
     {
+        flagOver = checkGameOver();
+        if (flagOver == true)
+        {
+            _uiManager4E.ShowGameOver();
+        }
+        if (flagOver == false)
+        {
+            if (_uiManager4E.losePanel.activeSelf == true)
+            {
+                _uiManager4E.closeGameOver();
+
+            }
+        }
+
         if (CheckIfWin())
         {
+            if (_uiManager4E.losePanel.activeSelf == true)
+            {
+                _uiManager4E.closeGameOver();
+            }
             _uiManager4E.ShowVictoryScreen();
             _uiManager4E.StopTimer();
         }
+        
+
+
+
             
+    }
+
+
+    public bool checkGameOver()
+    {
+        bool flag = false;
+
+        GameObject[] nums = GameObject.FindGameObjectsWithTag("Number");
+        for (int i = 0; i < nums.Length; i++)
+        {
+            Numbers numScript = nums[i].GetComponent<Numbers>();
+      
+            if (numScript.row != 4 && numScript.col != 4)
+            {
+                if (numScript.value == 0)
+                {
+                    flag = false;
+                }
+
+
+                else
+                {
+                    flag = true;
+                }
+                  
+            }
+        }
+        return flag;
+
     }
 
     public void RestartGame()
