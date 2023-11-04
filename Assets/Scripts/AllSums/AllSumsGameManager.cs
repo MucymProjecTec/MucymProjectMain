@@ -11,13 +11,14 @@ public class AllSumsGameManager : MonoBehaviour
     public GameObject pivot;
 
     private UI_ManagerAllSums _uiManager;
-
+    bool flagOver;
     // Start is called before the first frame update
     void Start()
     {
         DisableReplacementNumbers();
         _numbers = new int[5, 2];
         _uiManager = GameObject.Find("Canvas").GetComponent<UI_ManagerAllSums>();
+        
     }
 
     // Update is called once per frame
@@ -57,7 +58,7 @@ public class AllSumsGameManager : MonoBehaviour
         for (int i = 0; i < nums.Length; i++)
         {
             NumbersAllSums numScript = nums[i].GetComponent<NumbersAllSums>();
-            Debug.Log("[" + numScript.row + "," + numScript.col + "] = " + numScript.value);
+     
 
             if (numScript.row != 5 && numScript.col != 2)
             {
@@ -66,6 +67,17 @@ public class AllSumsGameManager : MonoBehaviour
                 else
                     _numbers[numScript.row, numScript.col] = numScript.value; //Load the value of the piece on it's current position 
             }
+
+            if (numScript.row == 5 && numScript.col == 5)
+            {
+                if (numScript.value == 0) //If there are still clean pieces on the evaluation board: row -> 0,1,2 or col -> 0,1,2
+                    return false;
+                else
+                    pivot.GetComponent<NumbersAllSums>().value = numScript.value; //Load the value of the piece on it's current position 
+            }
+
+
+
         }
 
         int condition1_value = _numbers[0, 0] + _numbers[0, 1] + pivot.GetComponent<NumbersAllSums>().value;
@@ -75,27 +87,19 @@ public class AllSumsGameManager : MonoBehaviour
         int condition5_value = _numbers[4, 0] + _numbers[4, 1] + pivot.GetComponent<NumbersAllSums>().value;
 
 
-        Debug.Log("value1: " + (int)condition1_value);
-        Debug.Log("value2: " + (int)condition2_value);
-        Debug.Log("value3: " + (int)condition3_value);
-        Debug.Log("value4: " + (int)condition4_value);
-        Debug.Log("value5: " + (int)condition5_value);
+  
 
-        int targetValue = condition1_value;
-       if (condition1_value != targetValue ||
-           condition2_value != targetValue ||
-           condition3_value != targetValue ||
-           condition4_value != targetValue ||
-           condition5_value != targetValue)
-        {
-            flag = false;
-        }
-        else
+       int targetValue = condition1_value;
+       if (condition1_value == targetValue &&
+           condition2_value == targetValue &&
+           condition3_value == targetValue &&
+           condition4_value == targetValue &&
+           condition5_value == targetValue)
         {
             flag = true;
         }
-
-        
+   
+   
         return flag;
 
 
@@ -103,17 +107,78 @@ public class AllSumsGameManager : MonoBehaviour
     }
     public void CheckLastMovement()
     {
+
+        if (checkGameOver())
+        {
+            int pivotVal = pivot.GetComponent<NumbersAllSums>().value;
+            Debug.Log("Pivot: " + pivotVal);
+            if (pivotVal != 0)
+            {
+                _uiManager.ShowGameOver();
+            }
+
+        }
+
         if (CheckIfWin())
         {
+
+            _uiManager.closeGameOver();
             _uiManager.ShowVictoryScreen();
             _uiManager.StopTimer();
         }
 
+ 
+        
+
+        
+
     }
+
+
+    public bool checkGameOver()
+    {
+        bool flag = false;
+        
+        GameObject[] nums = GameObject.FindGameObjectsWithTag("Number");
+       
+        for (int i = 0; i < nums.Length; i++)
+        {
+            NumbersAllSums numScript = nums[i].GetComponent<NumbersAllSums>();
+
+            if (numScript.row != 5 && numScript.col != 2)
+            {
+                if (numScript.value == 0)
+                {
+                    flag = false;
+
+                }
+                   
+                if (numScript.value != 0)
+                {
+                    flag = true;
+                }
+
+            }
+            if (numScript.row == 5 && numScript.col == 5)
+            {
+                if (numScript.value == 0) //If there are still clean pieces on the evaluation board: row -> 0,1,2 or col -> 0,1,2
+                    return false;
+                else
+                    pivot.GetComponent<NumbersAllSums>().value = numScript.value; //Load the value of the piece on it's current position 
+            }
+
+
+
+        }
+        Debug.Log("Flag Gamer Over: " + flag);
+        return flag;
+    }
+
 
     public void RestartGame()
     {
         _uiManager.HideVictoryScreen();
+        _uiManager.closeGameOver();
         EnableReplacementNumbers();
         GameObject[] nums = GameObject.FindGameObjectsWithTag("Number");
         for (int i = 0; i < nums.Length; i++)

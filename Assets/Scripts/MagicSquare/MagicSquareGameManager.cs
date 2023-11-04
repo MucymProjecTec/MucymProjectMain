@@ -10,6 +10,7 @@ public class MagicSquareGameManager : MonoBehaviour
 
     public UI_ManagerMagicSquare _uiManager;
 
+    bool flagOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -97,17 +98,71 @@ public class MagicSquareGameManager : MonoBehaviour
             Debug.Log(checkAntiDiagonalSum);
         }
 
-        return checkColumnSum || checkRowSum || checkDiagonalSum || checkAntiDiagonalSum;
+        return checkColumnSum && checkRowSum && checkDiagonalSum && checkAntiDiagonalSum;
     }
+
+ 
+
+
 
     public void CheckLastMovement()
     {
+        flagOver = checkGameOver();
+        if (flagOver == true)
+        {
+            _uiManager.ShowGameOver();
+        }
+        if (flagOver == false)
+        {
+            if (_uiManager.losePanel.activeSelf == true)
+            {
+                _uiManager.closeGameOver();
+
+            }
+        }
+
         if (CheckIfWin())
         {
+            if (_uiManager.losePanel.activeSelf == true)
+            {
+                _uiManager.closeGameOver();
+            }
             _uiManager.ShowVictoryScreen();
             _uiManager.StopTimer();
-           
         }
+
+
+
+
+
+    }
+
+
+    public bool checkGameOver()
+    {
+        bool flag = false;
+
+        GameObject[] nums = GameObject.FindGameObjectsWithTag("Number");
+        for (int i = 0; i < nums.Length; i++)
+        {
+            OptionsNumbers numScript = nums[i].GetComponent<OptionsNumbers>();
+
+            if (numScript.row != 4 && numScript.col != 4)
+            {
+                if (numScript.value == 0)
+                {
+                    return false;
+                }
+
+
+                else
+                {
+                    flag = true;
+                }
+
+            }
+        }
+        return flag;
 
     }
 

@@ -15,6 +15,7 @@ public class FourEquationsGameManager : MonoBehaviour
     {
         DisableReplacementNumbers();
         _numbers = new int[3, 3];
+      
 
         _uiManager4E = GameObject.Find("Canvas").GetComponent<UI_Manager4E>();
     }
@@ -124,7 +125,7 @@ public class FourEquationsGameManager : MonoBehaviour
             {
                 if (numScript.value == 0)
                 {
-                    flag = false;
+                    flag= false;
                 }
 
 
@@ -142,6 +143,7 @@ public class FourEquationsGameManager : MonoBehaviour
     public void RestartGame()
     {
         _uiManager4E.HideVictoryScreen();
+        _uiManager4E.closeGameOver();
         EnableReplacementNumbers();
         GameObject[] nums = GameObject.FindGameObjectsWithTag("Number");
         for (int i = 0; i < nums.Length; i++)
