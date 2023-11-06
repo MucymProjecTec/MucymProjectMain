@@ -135,6 +135,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6264138}
     - target: {fileID: 1729188842357886094, guid: ebde408c44a5c63488303315d2fe3a24, type: 3}
+      propertyPath: puzzle
+      value: 
+      objectReference: {fileID: 2190091}
+    - target: {fileID: 1729188842357886094, guid: ebde408c44a5c63488303315d2fe3a24, type: 3}
       propertyPath: AxisImage
       value: 
       objectReference: {fileID: 6264139}
@@ -3832,12 +3836,24 @@ PrefabInstance:
       objectReference: {fileID: 2190092}
     - target: {fileID: 631798878517631064, guid: 0f28b706b338663449449582a49bfb80, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 631798878517631064, guid: 0f28b706b338663449449582a49bfb80, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2190092}
+    - target: {fileID: 631798878517631064, guid: 0f28b706b338663449449582a49bfb80, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DecreaseAxisRotaion
+      objectReference: {fileID: 0}
+    - target: {fileID: 631798878517631064, guid: 0f28b706b338663449449582a49bfb80, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PieceRotation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 631798878517631064, guid: 0f28b706b338663449449582a49bfb80, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 631798879066459949, guid: 0f28b706b338663449449582a49bfb80, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

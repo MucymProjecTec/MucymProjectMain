@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class PieceRotation : MonoBehaviour
@@ -14,7 +15,18 @@ public class PieceRotation : MonoBehaviour
     public int currentAxis = 0;
     public List<Sprite> axisImages = new();
     public Image AxisImage;
+    public PuzzleFigure puzzle;
+    public bool increasehold;
+    public bool decreasehold;
+    public float rotationSpeed;
 
+    private void Update()
+    {
+        if(increasehold)
+            currentPiece.transform.Rotate(axisMap[currentAxis] * Time.deltaTime*rotationSpeed);
+        if(decreasehold)
+            currentPiece.transform.Rotate(-axisMap[currentAxis]*Time.deltaTime* rotationSpeed);
+    }
     public void SetCurrentPiece(GameObject piece)
     {
         currentPiece = piece;
@@ -34,15 +46,22 @@ public class PieceRotation : MonoBehaviour
         AxisImage.sprite = axisImages[currentAxis];
     }
 
-    public void IncreaseAxisRotation()
-    {
-        if(currentPiece != null)
-            currentPiece.transform.Rotate(axisMap[currentAxis]);
-    }
-
-    public void DecreaseAxisRotaion()
+    public void IncreaseAxisRotationHold()
     {
         if (currentPiece != null)
-            currentPiece.transform.Rotate(-axisMap[currentAxis]);
+            increasehold = true;
+    }
+
+    public void DecreaseAxisRotationHold()
+    {
+        if (currentPiece != null)
+            decreasehold = true;
+    }
+
+    public void Release()
+    {
+        decreasehold = false;
+        increasehold = false;
+        puzzle.CheckFigureIsComplete();
     }
 }
