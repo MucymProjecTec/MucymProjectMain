@@ -8,7 +8,7 @@ public class ChangeImage1 : MonoBehaviour
     public Sprite[] sprites;
     public Image imageRenderer;
     public static int selectNum = 0;
-
+    public bool direction;
 
     public int getSelectNum()
     {
@@ -19,42 +19,29 @@ public class ChangeImage1 : MonoBehaviour
         selectNum = num;
     }
 
-    public void nextScene()
+    public void changeNumber()
     {
-       
-
-        if (selectNum == sprites.Length-1)
-        {
-            imageRenderer.sprite = sprites[selectNum];
-            selectNum = 0;
-        }
-        else
+        if (direction)
         {
             selectNum += 1;
-        }
-        Debug.Log("Index: " + selectNum);
-        imageRenderer.sprite = sprites[selectNum];
 
-
-    }
-
-    public void previousScene()
-    {
-       
-        if (selectNum != 0)
-        {
-            selectNum -= 1;
-            
+            if (selectNum == sprites.Length - 1)
+            {
+                selectNum = 0;
+            }
         }
         else
         {
-            selectNum = sprites.Length-1;
+            if (selectNum != 0)
+            {
+                selectNum -= 1;
+            }
+            else if (selectNum == 0)
+            {
+                selectNum = sprites.Length - 1;
+            }
         }
-        Debug.Log("Index: " + selectNum);
+        
         imageRenderer.sprite = sprites[selectNum];
-
     }
-
- 
-
 }

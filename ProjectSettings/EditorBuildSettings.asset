@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SolitaireChess.unity
     guid: a8c4b269cf412e54b9af37baac79cccf
+  - enabled: 1
+    path: Assets/Scenes/TPuzzle.unity
+    guid: a69ddd24ac1ae5d4ab506f509d4ba4ba
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: bee59cfb14ad8254a802852cdc6de782, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: bf6f3c9564afcf1488f4619747dc6d33, type: 2}
