@@ -12,8 +12,8 @@ public class PieceRotation : MonoBehaviour
         { 2, Vector3.forward},
     };
     public int currentAxis = 0;
-    public List<Image> axisImages = new();
-    public Button AxisImage; 
+    public List<Sprite> axisImages = new();
+    public Image AxisImage;
 
     public void SetCurrentPiece(GameObject piece)
     {
@@ -26,11 +26,12 @@ public class PieceRotation : MonoBehaviour
         if (currentAxis > 2) {
             currentAxis = 0;
         }
+        UpdatePanel();
     }
 
     public void UpdatePanel()
     {
-        AxisImage.image = axisImages[currentAxis];
+        AxisImage.sprite = axisImages[currentAxis];
     }
 
     public void IncreaseAxisRotation()

@@ -164,7 +164,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866563856103153684}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52d72cc6210cb7144a24acb7402222a6, type: 3}
   m_Name: 
@@ -208,6 +208,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1729188842357886094}
+        m_TargetAssemblyTypeName: PieceRotation, Assembly-CSharp
+        m_MethodName: SetCurrentPiece
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1866563856103153684}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeselected:
     m_PersistentCalls:
       m_Calls:
@@ -228,12 +240,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
-    m_PersistentCalls:
-      m_Calls: []
-  onSelectedSelectFinger:
-    m_PersistentCalls:
-      m_Calls: []
-  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1866563856115470278
@@ -580,7 +586,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866563856401749152}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52d72cc6210cb7144a24acb7402222a6, type: 3}
   m_Name: 
@@ -639,6 +645,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1729188842357886094}
+        m_TargetAssemblyTypeName: PieceRotation, Assembly-CSharp
+        m_MethodName: SetCurrentPiece
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1866563856401749152}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeselected:
     m_PersistentCalls:
       m_Calls:
@@ -659,12 +677,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
-    m_PersistentCalls:
-      m_Calls: []
-  onSelectedSelectFinger:
-    m_PersistentCalls:
-      m_Calls: []
-  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1866563856418576177
@@ -963,7 +975,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866563856500451865}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52d72cc6210cb7144a24acb7402222a6, type: 3}
   m_Name: 
@@ -1007,6 +1019,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1729188842357886094}
+        m_TargetAssemblyTypeName: PieceRotation, Assembly-CSharp
+        m_MethodName: SetCurrentPiece
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1866563856500451865}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeselected:
     m_PersistentCalls:
       m_Calls:
@@ -1027,12 +1051,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
-    m_PersistentCalls:
-      m_Calls: []
-  onSelectedSelectFinger:
-    m_PersistentCalls:
-      m_Calls: []
-  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1866563856582470564
@@ -1199,7 +1217,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866563856582470564}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52d72cc6210cb7144a24acb7402222a6, type: 3}
   m_Name: 
@@ -1243,6 +1261,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1729188842357886094}
+        m_TargetAssemblyTypeName: PieceRotation, Assembly-CSharp
+        m_MethodName: SetCurrentPiece
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1866563856582470564}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeselected:
     m_PersistentCalls:
       m_Calls:
@@ -1263,12 +1293,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
-    m_PersistentCalls:
-      m_Calls: []
-  onSelectedSelectFinger:
-    m_PersistentCalls:
-      m_Calls: []
-  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1866563856642298744
@@ -2127,6 +2151,7 @@ GameObject:
   - component: {fileID: 1866563857593631803}
   - component: {fileID: 1866563857593631802}
   - component: {fileID: 3286060398035888278}
+  - component: {fileID: 1729188842357886094}
   m_Layer: 0
   m_Name: TFigure
   m_TagString: Untagged
@@ -2169,6 +2194,7 @@ MonoBehaviour:
   faces:
   - {fileID: 0}
   - {fileID: 0}
+  manager: {fileID: 0}
 --- !u!114 &3286060398035888278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2183,6 +2209,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   T: {fileID: 1866563857593631800}
   started: 0
+--- !u!114 &1729188842357886094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866563857593631800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9219a88ed51cef44891bad2efd7bc300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPiece: {fileID: 0}
+  currentAxis: 0
+  axisImages:
+  - {fileID: 21300000, guid: d2560117a1e4e9243944e290b57567fb, type: 3}
+  - {fileID: 21300000, guid: b6b1a139583d00549b000714b58c40a1, type: 3}
+  - {fileID: 21300000, guid: 27ddae19c16cdd741867590a4529cd18, type: 3}
+  AxisImage: {fileID: 0}
 --- !u!1 &1866563857653846788
 GameObject:
   m_ObjectHideFlags: 0
