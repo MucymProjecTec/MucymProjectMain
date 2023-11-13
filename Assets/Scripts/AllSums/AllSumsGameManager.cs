@@ -11,7 +11,6 @@ public class AllSumsGameManager : MonoBehaviour
     public GameObject pivot;
 
     private UI_ManagerAllSums _uiManager;
-    bool flagOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -85,12 +84,24 @@ public class AllSumsGameManager : MonoBehaviour
         int condition3_value = _numbers[2, 0] + _numbers[2, 1] + pivot.GetComponent<NumbersAllSums>().value;
         int condition4_value = _numbers[3, 0] + _numbers[3, 1] + pivot.GetComponent<NumbersAllSums>().value;
         int condition5_value = _numbers[4, 0] + _numbers[4, 1] + pivot.GetComponent<NumbersAllSums>().value;
+        Debug.Log("Condition 1 value:  " + condition1_value);
+        Debug.Log("Condition 2 value:  " + condition2_value);
+        Debug.Log("Condition 3 value:  " + condition3_value);
+        Debug.Log("Condition 4 value:  " + condition4_value);
+        Debug.Log("Condition 5 value: " + condition1_value);
 
 
-  
 
-       int targetValue = condition1_value;
-       if (condition1_value == targetValue &&
+        int targetValue = condition1_value;
+        if (condition1_value != targetValue ||
+            condition2_value != targetValue ||
+            condition3_value != targetValue ||
+            condition4_value != targetValue ||
+            condition5_value != targetValue)
+        {
+            flag = false;
+        }
+        if (condition1_value == targetValue &&
            condition2_value == targetValue &&
            condition3_value == targetValue &&
            condition4_value == targetValue &&
