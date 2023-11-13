@@ -468,7 +468,7 @@ MonoBehaviour:
   - {fileID: 7121259521067587217}
   - {fileID: 3888093222930118977}
   - {fileID: 3930519386166462274}
-  _uiManager: {fileID: 1380251752}
+  _uiManager: {fileID: 0}
 --- !u!1 &350946959
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,7 +545,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1493748261}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &381899792
 MonoBehaviour:

@@ -44,8 +44,11 @@ public class MagicSquareGameManager : MonoBehaviour
     public bool CheckIfWin()
     {
         bool checkColumnSum, checkRowSum, checkDiagonalSum, checkAntiDiagonalSum;
+        int counterRowSum, counterColumnSum;
         checkColumnSum = false;
+        counterColumnSum = 0;
         checkRowSum = false;
+        counterRowSum = 0;
         checkDiagonalSum = false;
         checkAntiDiagonalSum = false;
 
@@ -55,7 +58,6 @@ public class MagicSquareGameManager : MonoBehaviour
         for (int i = 0; i < nums.Length; i++)
         {
             OptionsNumbers numScript = nums[i].GetComponent<OptionsNumbers>();
-             Debug.Log("[" + numScript.row + "," + numScript.col + "] = " + numScript.value);
 
             if (numScript.row != 4 && numScript.col != 4)
             {
@@ -71,33 +73,44 @@ public class MagicSquareGameManager : MonoBehaviour
             // Verificar las filas
             if ((_numbers[i, 0] + _numbers[i, 1] + _numbers[i, 2]) == 15)
             {
-                checkRowSum = true;
-                Debug.Log(checkRowSum);
+    
+                counterRowSum += 1;
 
             }
+
 
             // Verificar las columnas
             if ((_numbers[0, i] + _numbers[1, i] + _numbers[2, i]) == 15)
             {
-                checkColumnSum = true;
-                Debug.Log(checkColumnSum);
+                counterColumnSum += 1;
 
             }
+   
         }
+        if (counterRowSum.Equals(3))
+        {
+            checkRowSum = true;
+        }
+        if (counterColumnSum.Equals(3))
+        {
+            checkColumnSum = true;
+        }
+
 
         // Verificar las diagonales
         if ((_numbers[0, 0] + _numbers[1, 1] + _numbers[2, 2]) == 15)
         {
             checkDiagonalSum = true;
-            Debug.Log(checkDiagonalSum);
+          
         }
 
         if ((_numbers[0, 2] + _numbers[1, 1] + _numbers[2, 0]) == 15)
         {
             checkAntiDiagonalSum = true;
-            Debug.Log(checkAntiDiagonalSum);
+            
         }
-
+        bool flagv = checkColumnSum && checkRowSum && checkDiagonalSum && checkAntiDiagonalSum;
+        Debug.Log("CheckiF Win Prueba: " + flagv);
         return checkColumnSum && checkRowSum && checkDiagonalSum && checkAntiDiagonalSum;
     }
 
@@ -107,6 +120,7 @@ public class MagicSquareGameManager : MonoBehaviour
 
     public void CheckLastMovement()
     {
+
         flagOver = checkGameOver();
         if (flagOver == true)
         {
@@ -121,15 +135,27 @@ public class MagicSquareGameManager : MonoBehaviour
             }
         }
 
+
         if (CheckIfWin())
         {
             if (_uiManager.losePanel.activeSelf == true)
             {
                 _uiManager.closeGameOver();
+                _uiManager.ShowVictoryScreen();
+                _uiManager.StopTimer();
+
             }
-            _uiManager.ShowVictoryScreen();
-            _uiManager.StopTimer();
+            else
+            {
+                _uiManager.ShowVictoryScreen();
+                _uiManager.StopTimer();
+            }
+  
         }
+
+
+
+
 
 
 
@@ -149,9 +175,9 @@ public class MagicSquareGameManager : MonoBehaviour
 
             if (numScript.row != 4 && numScript.col != 4)
             {
-                if (numScript.value == 0)
+              if (numScript.value == 0)
                 {
-                    return false;
+                    flag= false;
                 }
 
 
@@ -170,6 +196,7 @@ public class MagicSquareGameManager : MonoBehaviour
     {
         _uiManager.HideVictoryScreen();
         EnableReplacementNumbers();
+        _uiManager.closeGameOver();
         GameObject[] nums = GameObject.FindGameObjectsWithTag("Number");
         for (int i = 0; i < nums.Length; i++)
         {
