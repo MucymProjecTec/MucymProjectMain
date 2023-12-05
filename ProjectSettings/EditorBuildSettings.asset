@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: b89987d0b747d64498006440a57e5111
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Herradura.unity
     guid: 52064e61721e95c47b78f70c8250ea03
   - enabled: 1
@@ -35,7 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AllSums.unity
     guid: 49a72bcba51f2124590c1236059ca587
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TPuzzle.unity
     guid: a69ddd24ac1ae5d4ab506f509d4ba4ba
   - enabled: 1

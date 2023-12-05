@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Algorithm : MonoBehaviour
 {
@@ -8,24 +9,27 @@ public class Algorithm : MonoBehaviour
     public string name;
     public AudioSource audio;
     public AudioSource audioFelicidades;
-    public string [] valores;
-    public Animator _victoryAnimator;
-    public Animator animacion;
+    private string[] valores;
+    private Animator _victoryAnimator;
+
+    private Animator _lostAnimator;
+    private Animator animacion;
 
     void Start()
     {
         animacion = this.GetComponent<Animator>();
         CreateArray createArray = myHoof.GetComponent<CreateArray>();
         _victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>();
+        _lostAnimator = GameObject.Find("LostPanel").GetComponent<Animator>();
         valores = createArray.getArray();
     }
 
-    public int returnEmptySpace()
+    private int returnEmptySpace()
     {
-        Debug.Log("Cont: " + valores.Length);
+     
         for (int i = 0; i < valores.Length; i++)
         {
-            Debug.Log("Cont1: " + valores[i]);
+  
             if (valores[i].Equals("null"))
             {
                 return i;
@@ -34,7 +38,7 @@ public class Algorithm : MonoBehaviour
         return -1;
     }
 
-    public int returnBallIndex(string name)
+    private int returnBallIndex(string name)
     {
         for (int i = 0; i < valores.Length; i++)
         {
@@ -46,7 +50,7 @@ public class Algorithm : MonoBehaviour
         return -1;
     }
 
-    public bool moveBall(string name)
+    private bool moveBall(string name)
     {
         audio.Play();
         int indexBallV = returnBallIndex(name);
@@ -65,7 +69,7 @@ public class Algorithm : MonoBehaviour
         return false;
     }
 
-    public bool condition1B(string name)
+    private bool condition1B(string name)
     {
         if (returnBallIndex(name) == 0)
         {
@@ -142,7 +146,7 @@ public class Algorithm : MonoBehaviour
         return false;
     }
 
-    public bool condition2B(string name)
+    private bool condition2B(string name)
     {
         if (returnBallIndex(name) == 1)
         {
@@ -219,7 +223,7 @@ public class Algorithm : MonoBehaviour
         return false;
     }
 
-    public bool condition3B(string name)
+    private bool condition3B(string name)
     {
         if (returnBallIndex(name) == 2)
         {
@@ -278,7 +282,7 @@ public class Algorithm : MonoBehaviour
         return false;
     }
 
-    public bool condition4R(string name)
+    private bool condition4R(string name)
     {
         if (returnBallIndex(name) == 4)
         {
@@ -337,7 +341,7 @@ public class Algorithm : MonoBehaviour
         return false;
     }
 
-    public bool condition5R(string name)
+    private bool condition5R(string name)
     {
         if (returnBallIndex(name) == 5)
         {
@@ -414,7 +418,7 @@ public class Algorithm : MonoBehaviour
         return false;
     }
 
-    public bool condition6R(string name)
+    private bool condition6R(string name)
     {
         if (returnBallIndex(name) == 6)
         {
@@ -490,17 +494,56 @@ public class Algorithm : MonoBehaviour
         }
         return false;
     }
+    private bool IsGameLost()
+    {
+        // Verificar si Sphere1, Sphere2 y Sphere3 están bloqueados
+        if (valores[0] == "Sphere1" && valores[1] == "null" && valores[2] == "Sphere2" && valores[3] == "Sphere3")
+        {
+            Debug.Log("Game Lost 1!");
+            return true;
+        }
+
+        // Verificar si Sphere4, Sphere5 y Sphere6 están bloqueados
+        if (valores[3] == "Sphere4" && valores[4] == "Sphere5" && valores[5] == "null" && valores[6] == "Sphere6")
+        {
+            Debug.Log("Game Lost 2!");
+            return true;
+        }
+
+       
+        if (valores[0] == "Sphere1" && valores[1] == "Sphere2" && valores[2] == "Sphere4" && valores[3] == "Sphere5")
+        {
+            Debug.Log("Game Lost 3!");
+            return true;
+        }
+
+        if (valores[3] == "Sphere2" && valores[4] == "Sphere3" && valores[5] == "Sphere5" && valores[6] == "Sphere6")
+        {
+            Debug.Log("Game Lost 4!");
+            return true;
+        }
+
+        // Add more conditions as needed...
+
+        return false;
+    }
 
     public void IsWinner()
     {
-        if (valores[0].Equals("Sphere4") && valores[1].Equals("Sphere5") && valores[2].Equals("Sphere6") && 
+        if (valores[0].Equals("Sphere4") && valores[1].Equals("Sphere5") && valores[2].Equals("Sphere6") &&
             valores[4].Equals("Sphere1") && valores[5].Equals("Sphere2") && valores[6].Equals("Sphere3"))
         {
             ShowVictoryScreen();
         }
+        else if (IsGameLost())
+        {
+            // Add code to handle game lost
+            Debug.Log("Game Lost!");
+            _lostAnimator.SetBool("ShowVictory", true);
+        }
     }
-    
-    public void ShowVictoryScreen()
+
+    private void ShowVictoryScreen()
     {
         _victoryAnimator.SetBool("ShowVictory", true);
         audioFelicidades.Play();
