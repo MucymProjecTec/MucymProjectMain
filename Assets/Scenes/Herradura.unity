@@ -426,6 +426,9 @@ MonoBehaviour:
   name: Sphere3
   audio: {fileID: 1391795008}
   audioFelicidades: {fileID: 1928209550}
+  valores: []
+  _victoryAnimator: {fileID: 0}
+  animacion: {fileID: 0}
 --- !u!114 &179537827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -987,6 +990,9 @@ MonoBehaviour:
   name: Sphere5
   audio: {fileID: 1391795008}
   audioFelicidades: {fileID: 1928209550}
+  valores: []
+  _victoryAnimator: {fileID: 0}
+  animacion: {fileID: 0}
 --- !u!114 &576622776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1746,6 +1752,9 @@ MonoBehaviour:
   name: Sphere4
   audio: {fileID: 1391795008}
   audioFelicidades: {fileID: 1928209550}
+  valores: []
+  _victoryAnimator: {fileID: 0}
+  animacion: {fileID: 0}
 --- !u!114 &986167167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2159,6 +2168,9 @@ MonoBehaviour:
   name: Sphere1
   audio: {fileID: 1391795008}
   audioFelicidades: {fileID: 1928209550}
+  valores: []
+  _victoryAnimator: {fileID: 0}
+  animacion: {fileID: 0}
 --- !u!95 &1281222112
 Animator:
   serializedVersion: 5
@@ -2702,7 +2714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5267412646615438082, guid: 8d2943710381d3b478dd6ca09ab1bb0d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 390
+      value: 370
       objectReference: {fileID: 0}
     - target: {fileID: 5267412646615438082, guid: 8d2943710381d3b478dd6ca09ab1bb0d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3051,6 +3063,9 @@ MonoBehaviour:
   name: Sphere6
   audio: {fileID: 1391795008}
   audioFelicidades: {fileID: 1928209550}
+  valores: []
+  _victoryAnimator: {fileID: 0}
+  animacion: {fileID: 0}
 --- !u!114 &1876170672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3582,6 +3597,9 @@ MonoBehaviour:
   name: Sphere2
   audio: {fileID: 1391795008}
   audioFelicidades: {fileID: 1928209550}
+  valores: []
+  _victoryAnimator: {fileID: 0}
+  animacion: {fileID: 0}
 --- !u!114 &1948877847
 MonoBehaviour:
   m_ObjectHideFlags: 0

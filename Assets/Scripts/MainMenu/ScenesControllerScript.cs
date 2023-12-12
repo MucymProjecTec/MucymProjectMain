@@ -31,10 +31,6 @@ public class ScenesControllerScript : MonoBehaviour
         SceneManager.LoadScene("Herradura");
     }
 
-    public void LoadSolitaireChess()
-    {
-        SceneManager.LoadScene("SolitaireChess");
-    }
 
     public void LoadColorSquares()
     {
@@ -49,6 +45,10 @@ public class ScenesControllerScript : MonoBehaviour
     public void LoadTPuzzle()
     {
         SceneManager.LoadScene("TPuzzle");
+    }
+    public void LoadSolitaireChess()
+    {
+        SceneManager.LoadScene("SolitaireChess");
     }
 
     public void CloseGame()
