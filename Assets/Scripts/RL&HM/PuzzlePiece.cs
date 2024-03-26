@@ -10,20 +10,14 @@ public class PuzzlePiece : MonoBehaviour
         void Start()
         {
         selectable = GetComponent<LeanSelectableByFinger>();
-        rb = transform.GetComponent<Rigidbody>();
-
+        rb = transform.GetComponent<Rigidbody>();               //to transform it into a rigidbody
     }
 
     void Update()
     {
-        //transform.rotation = _plane.transform.rotation;  
         if (!selectable.IsSelected)
         {
-            rb.constraints = RigidbodyConstraints.FreezeAll;
-        }
-        else
-        {
-
+            rb.constraints = RigidbodyConstraints.FreezeAll;    //Freeze all the axis, the piece becomes 
         }
     }
 
