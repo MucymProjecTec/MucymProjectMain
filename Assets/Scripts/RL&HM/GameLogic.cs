@@ -57,7 +57,7 @@ public class GameLogic : MonoBehaviour
     }
 
     //To check if the piece is in the correct position to add to the count
-    bool FullyContains(Collider resident, Collider zone, float tolerance = .1f)
+    bool FullyContains(Collider resident, Collider zone, float tolerance = .01f)
     {
         if (zone == null)
         {
