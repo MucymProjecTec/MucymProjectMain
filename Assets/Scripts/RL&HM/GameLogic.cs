@@ -16,7 +16,6 @@ public class GameLogic : MonoBehaviour
         _uiManager4E = GameObject.Find("Canvas").GetComponent<UI_Manager4E>();
         _uiManager4E.StartTimer();
         _victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>(); //Victory Panel Calling
-
     }
 
     // Update is called once per frame
@@ -53,11 +52,10 @@ public class GameLogic : MonoBehaviour
             _uiManager4E.StopTimer();
             ShowVictoryScreen();
         }
-
     }
 
     //To check if the piece is in the correct position to add to the count
-    bool FullyContains(Collider resident, Collider zone, float tolerance = .01f)
+    bool FullyContains(Collider resident, Collider zone, float tolerance = .02f)
     {
         if (zone == null)
         {
@@ -72,5 +70,4 @@ public class GameLogic : MonoBehaviour
                expandedBounds.Contains(resident.bounds.max) &&
                expandedBounds.Contains(resident.bounds.center);
     }
-
 }
