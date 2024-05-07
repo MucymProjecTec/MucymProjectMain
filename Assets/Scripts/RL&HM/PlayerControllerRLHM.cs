@@ -15,4 +15,11 @@ public class PlayerControllerRLHM : MonoBehaviour
     {
 
     }
+
+    /*
+     * I don't know how much this code affects the game 
+     * Last programmer just left it here w/o saying anything
+     * I think this does nothing but you never know
+     */
+
 }
