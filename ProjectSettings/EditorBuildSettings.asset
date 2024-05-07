@@ -33,17 +33,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MagicSquare_QR.unity
     guid: 209e43432510edd429e31af7e9ae0122
   - enabled: 1
-    path: Assets/Scenes/TPuzzle_2D.unity
-    guid: 70ae5a648a77de747b9e69309cdb5019
-  - enabled: 1
-    path: Assets/Scenes/AllSums.unity
-    guid: 49a72bcba51f2124590c1236059ca587
-  - enabled: 1 
     path: Assets/Scenes/AllSums_QR.unity
     guid: b0dee15cc820b5c4f9af9ed534ed7730
   - enabled: 1
-    path: Assets/Scenes/TPuzzle.unity
-    guid: a69ddd24ac1ae5d4ab506f509d4ba4ba
+    path: Assets/Scenes/TPuzzle_2D.unity
+    guid: 70ae5a648a77de747b9e69309cdb5019
   - enabled: 1
     path: Assets/Scenes/SolitaireChess_QR.unity
     guid: 30c4e0c0ae37d6b40ac22dbae21231d9
