@@ -3,7 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class ScenesControllerScript : MonoBehaviour
 {
-
+    public void LoadCuadroPiezasT()
+    {
+        SceneManager.LoadScene("CuadroPiezasT");
+    }
+    public void LoadTrianguloHexa()
+    {
+        SceneManager.LoadScene("Triangulo-Hexagono");
+    }
     public void LoadDisksGame()
     {
         SceneManager.LoadScene("DisksScene_QR");
@@ -30,7 +37,6 @@ public class ScenesControllerScript : MonoBehaviour
     {
         SceneManager.LoadScene("Herradura_QR");
     }
-
 
     public void LoadColorSquares()
     {
