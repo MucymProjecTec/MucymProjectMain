@@ -1,5 +1,4 @@
-﻿using Lean.Touch;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,28 +8,27 @@ public class MovementManager : MonoBehaviour
     public List<GameObject> selected = new List<GameObject>();
 
     private GameManager manager;
-    // Start is called before the first frame update
+
     void Start()
     {
-        manager = this.GetComponent<GameManager>();
-
+        manager = FindObjectOfType<GameManager>();
+        if (manager == null)
+        {
+            Debug.LogError("GameManager not found!");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // No specific update logic required for now
     }
-
 
     public void addSelected(GameObject add)
     {
-
-        if (selected.Count <= 2) {
-
+        if (selected.Count < 2)
+        {
             if (selected.Contains(add))
             {
-
                 selected.Remove(add);
             }
             else
@@ -39,33 +37,28 @@ public class MovementManager : MonoBehaviour
             }
         }
 
-        if(selected.Count == 2)
+        if (selected.Count == 2)
         {
-            manager.clearEverything();
-            Vector3 tempTrans = selected[0].transform.position;
-            selected[0].transform.position = selected[1].transform.position;
-            selected[1].transform.position = tempTrans;
+            SwapPositions(selected[0], selected[1]);
 
+            // Deselecting using Unity's selection system
+            selected[0].GetComponent<Renderer>().material.color = Color.white;
+            selected[1].GetComponent<Renderer>().material.color = Color.white;
 
+            // Clear the selection list
+            selected.Clear();
 
-            selected[0].GetComponent<LeanSelectableByFinger>().Deselect();
-            selected[1].GetComponent<LeanSelectableByFinger>().Deselect();
-
-            selected[0].GetComponent<MovementSquares>().clearAllChecks();
-            selected[1].GetComponent<MovementSquares>().clearAllChecks();
-
-            selected.RemoveAt(0);
-            selected.RemoveAt(0);
-
+            // Check win condition after swapping positions
+            manager.checkAllPositions();
         }
-
     }
-   /* public void deleteunSelected(GameObject add)
+
+    private void SwapPositions(GameObject obj1, GameObject obj2)
     {
-        Debug.Log("removed " + add.name);
+        Vector3 tempTrans = obj1.transform.position;
+        obj1.transform.position = obj2.transform.position;
+        obj2.transform.position = tempTrans;
 
-        selected.Remove(add);
-    }*/
-
-
+        Debug.Log($"Swapped positions of {obj1.name} and {obj2.name}");
+    }
 }

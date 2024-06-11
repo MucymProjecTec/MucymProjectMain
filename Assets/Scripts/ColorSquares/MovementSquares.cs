@@ -4,37 +4,48 @@ using UnityEngine;
 
 public class MovementSquares : MonoBehaviour
 {
-    // Start is called before the first frame update
     private GameManager manager;
+    private int currentPosition = 1;
 
     void Start()
     {
-        manager = GameObject.FindGameObjectsWithTag("GameController")[0].GetComponent<GameManager>();
+        manager = FindObjectOfType<GameManager>();
+        if (manager == null)
+        {
+            Debug.LogError("No GameManager found!");
+        }
 
-        Vector3 euler = transform.eulerAngles;
-        euler.z = 90 * Random.Range(0, 4);
-        transform.eulerAngles = euler;
-
+        // Initialize position randomly
+        SetPosition(Random.Range(1, 5));
+        Debug.Log("Initial position set to: " + currentPosition);
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        // Optionally, place any necessary update logic here
     }
 
     public void rotate()
     {
-        manager.clearEverything();
-        clearAllChecks();
+        Debug.Log("Rotating piece from position: " + currentPosition);
         this.transform.Rotate(0, 0, 90);
+
+        // Update the current position
+        currentPosition = (currentPosition % 4) + 1;
+        Debug.Log("New position is: " + currentPosition);
     }
 
-
-    public void clearAllChecks()
+    public void SetPosition(int position)
     {
-        foreach (Transform child in transform)
-            child.GetComponent<ColorSephere>().checks.Clear();
+        currentPosition = position;
+        Vector3 euler = transform.eulerAngles;
+        euler.z = 90 * (currentPosition - 1);
+        transform.eulerAngles = euler;
+        Debug.Log("SetPosition called: New position is " + currentPosition);
+    }
+
+    public int GetPosition()
+    {
+        return currentPosition;
     }
 }
-
