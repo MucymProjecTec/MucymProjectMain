@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Herradura_QR.unity
     guid: a5fd56d113251584b95dafc0c8f98034
   - enabled: 1
+    path: Assets/Scenes/Prueba.unity
+    guid: 2a36190e3b8a2eb4dae826116ec3783f
+  - enabled: 1
     path: Assets/Scenes/Hanoi_QR.unity
     guid: 26b947fad6e47a742bc26dc00ec6d767
   - enabled: 1
