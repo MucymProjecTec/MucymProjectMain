@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 90077975}
   m_Layer: 0
   m_Name: Pieza 1
-  m_TagString: Untagged
+  m_TagString: PuzzlePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -985,7 +985,7 @@ GameObject:
   - component: {fileID: 307082726}
   m_Layer: 0
   m_Name: Pieza 5
-  m_TagString: Untagged
+  m_TagString: PuzzlePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2822,7 +2822,7 @@ GameObject:
   - component: {fileID: 1106349193}
   m_Layer: 0
   m_Name: Pieza 3
-  m_TagString: Untagged
+  m_TagString: PuzzlePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3348,7 +3348,7 @@ GameObject:
   - component: {fileID: 1258206715}
   m_Layer: 0
   m_Name: Pieza 2
-  m_TagString: Untagged
+  m_TagString: PuzzlePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4193,7 +4193,7 @@ GameObject:
   - component: {fileID: 1623598222}
   m_Layer: 0
   m_Name: Pieza 6
-  m_TagString: Untagged
+  m_TagString: PuzzlePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5019,7 +5019,7 @@ GameObject:
   - component: {fileID: 2017245529}
   m_Layer: 0
   m_Name: Pieza 4
-  m_TagString: Untagged
+  m_TagString: PuzzlePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5793,7 +5793,7 @@ GameObject:
   - component: {fileID: 3480285580827372124}
   m_Layer: 0
   m_Name: Pieza 6
-  m_TagString: Untagged
+  m_TagString: PuzzlePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5883,7 +5883,7 @@ GameObject:
   - component: {fileID: 7559391486942468003}
   m_Layer: 0
   m_Name: Pieza 4
-  m_TagString: Untagged
+  m_TagString: PuzzlePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6397,7 +6397,7 @@ GameObject:
   - component: {fileID: 5852094292380568103}
   m_Layer: 0
   m_Name: Pieza 3
-  m_TagString: Untagged
+  m_TagString: PuzzlePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6566,7 +6566,7 @@ GameObject:
   - component: {fileID: 8673730595989620420}
   m_Layer: 0
   m_Name: Pieza 1
-  m_TagString: Untagged
+  m_TagString: PuzzlePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7210,7 +7210,7 @@ GameObject:
   - component: {fileID: 8886765433876885664}
   m_Layer: 0
   m_Name: Pieza 2
-  m_TagString: Untagged
+  m_TagString: PuzzlePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7529,7 +7529,7 @@ GameObject:
   - component: {fileID: 8897839043561037321}
   m_Layer: 0
   m_Name: Pieza 5
-  m_TagString: Untagged
+  m_TagString: PuzzlePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
