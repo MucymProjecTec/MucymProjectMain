@@ -5,74 +5,87 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private GameObject[] spheres;
+    private GameObject[] squares;
     [SerializeField]
     private Canvas canvas;
     private UI_Manager4E uiManager;
 
-
     public bool playerWon = false;
-    // Start is called before the first frame update
+
     void Start()
     {
-         spheres = GameObject.FindGameObjectsWithTag("PuzzlePiece");
+        squares = GameObject.FindGameObjectsWithTag("PuzzlePiece");
+        if (squares == null || squares.Length == 0)
+        {
+            Debug.LogError("No PuzzlePieces found!");
+            return;
+        }
+
+        Debug.Log("Found " + squares.Length + " puzzle pieces.");
         uiManager = canvas.GetComponent<UI_Manager4E>();
+        if (uiManager == null)
+        {
+            Debug.LogError("UI_Manager4E not found on Canvas!");
+            return;
+        }
+
         uiManager.HideVictoryScreen();
         uiManager.StartTimer();
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        // Check for the win condition at the start
+        checkAllPositions();
         if (playerWon)
         {
             endGame();
         }
     }
-    public void clearEverything()
-    {
-        foreach (GameObject sphere in spheres)
-        {
-            sphere.GetComponent<ColorSephere>().clear();
-        }
 
-        checkALL();
-        
+    void Update()
+    {
+        if (!playerWon)
+        {
+            checkAllPositions();
+        }
     }
 
-
-    public void checkALL()
+    public void checkAllPositions()
     {
-        bool won = false;
-        foreach (GameObject sphere in spheres)
+        bool won = true;
+        foreach (GameObject square in squares)
         {
-
-            List<bool> checks = sphere.GetComponent<ColorSephere>().checks;
-            foreach (bool check in checks)
+            var movementSquares = square.GetComponent<MovementSquares>();
+            int position = movementSquares.GetPosition();
+            Debug.Log($"Square {square.name} is in position {position}");
+            if (position != 1)
             {
-                won = check;
-
-                if (!won)
-                {
-                    break;
-                }
-
+                won = false;
+                break;
             }
-            
         }
-        playerWon = won;
-
+        if (won)
+        {
+            playerWon = true;
+            Debug.Log("Player has won!");
+            endGame();
+        }
     }
+
     private void endGame()
     {
-        uiManager.StopTimer();
-        uiManager.ShowVictoryScreen();
-
+        Debug.Log("Ending game and showing victory screen.");
+        if (uiManager != null)
+        {
+            uiManager.StopTimer();
+            uiManager.ShowVictoryScreen();
+        }
+        else
+        {
+            Debug.LogError("UI_Manager4E is not assigned in GameManager!");
+        }
     }
+
     public void reloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
     }
 }

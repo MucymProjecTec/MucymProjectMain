@@ -23,10 +23,9 @@ public class UI_Manager4E : MonoBehaviour
     void Start()
     {
         timerLabel.text = "Tiempo\n0:00";
-        //_victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>();
         _tipAnimator = tipPanel.GetComponent<Animator>();
         tipPanel.SetActive(false);
-         losePanel.SetActive(false);
+        losePanel.SetActive(false);
     }
 
     void Update()
@@ -54,7 +53,6 @@ public class UI_Manager4E : MonoBehaviour
     public void StopTimer()
     {
         startTimer = false;
-        //time = 0;
     }
 
     public void ResetTimer()
@@ -65,8 +63,8 @@ public class UI_Manager4E : MonoBehaviour
 
     public void ShowVictoryScreen()
     {
-        //Debug.Log("YOU WON!");
-        winnerAudio.Play();
+        Debug.Log("Victory Screen should be shown.");
+        //winnerAudio.Play();
         _victoryAnimator.SetBool("ShowVictory", true);
     }
 
@@ -75,6 +73,7 @@ public class UI_Manager4E : MonoBehaviour
         loserAudio.Play();
         losePanel.SetActive(true);
     }
+
     public void closeGameOver()
     {
         loserAudio.Stop();
@@ -84,7 +83,6 @@ public class UI_Manager4E : MonoBehaviour
     public void HideVictoryScreen()
     {
         _victoryAnimator.SetBool("ShowVictory", false);
-
     }
 
     public void ActivateTip()
@@ -92,7 +90,6 @@ public class UI_Manager4E : MonoBehaviour
         tipPanel.SetActive(true);
         AudioSource asTip = tipPanel.GetComponent<AudioSource>();
         asTip.Play();
-        //Handheld.Vibrate();
     }
 
     public void ShowTip()
@@ -104,6 +101,4 @@ public class UI_Manager4E : MonoBehaviour
     {
         _tipAnimator.SetBool("ShowTip", false);
     }
-
-
 }
