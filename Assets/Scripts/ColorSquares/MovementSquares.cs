@@ -16,7 +16,7 @@ public class MovementSquares : MonoBehaviour
         }
 
         // Initialize position randomly
-        SetPosition(Random.Range(1, 5));
+        ///SetPosition(Random.Range(1, 5));
         Debug.Log("Initial position set to: " + currentPosition);
     }
 

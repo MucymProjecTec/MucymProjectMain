@@ -368,7 +368,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -0.31918636, z: 2.0899367, w: 0.21753745}
+  m_BoundingSphereOverride: {x: 6.54e-43, y: 3.0432703e-17, z: 6.54e-43, w: 8.666298}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1333,7 +1333,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 0f4ddb95226c59f46a4911bfa01c05fe, type: 2}
-  - {fileID: 2100000, guid: 4ced57c878d541c45a45cf365e25888d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1384,7 +1383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &372709789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1737,7 +1736,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 0f4ddb95226c59f46a4911bfa01c05fe, type: 2}
-  - {fileID: 2100000, guid: 4ced57c878d541c45a45cf365e25888d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2722,7 +2720,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 0f4ddb95226c59f46a4911bfa01c05fe, type: 2}
-  - {fileID: 2100000, guid: 4ced57c878d541c45a45cf365e25888d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2943,7 +2940,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.499385e+10, y: NaN, z: 1.3958713e+10, w: 1.264647e+10}
+  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 2.5e-44, w: 1.3949e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -3270,6 +3267,7 @@ GameObject:
   - component: {fileID: 641113651}
   - component: {fileID: 641113650}
   - component: {fileID: 641113653}
+  - component: {fileID: 641113654}
   m_Layer: 0
   m_Name: ImageTarget
   m_TagString: Untagged
@@ -3317,10 +3315,58 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 593063218}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 960234742}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 593063218}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 960234742}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &641113651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3338,7 +3384,7 @@ MonoBehaviour:
   RuntimeCollider: 0
   mTrackableName: mucymtarget
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Mucym.xml
+  mDataSetPath: Vuforia/mucym.xml
   mAspectRatio: 1.162791
   mImageTargetType: 0
   mWidth: 1
@@ -3347,7 +3393,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 641113653}
+  mPreview: {fileID: 641113654}
 --- !u!4 &641113652
 Transform:
   m_ObjectHideFlags: 0
@@ -3374,13 +3420,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 641113648}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c327732f3471ec4e82ecc67ab768833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 1380251750}
+  playerWon: 0
+--- !u!114 &641113654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641113648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 1778676317, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 641113651}
   mHiddenRoot: {fileID: 0}
   mTargetName: mucymtarget
-  mDatasetName: Vuforia/Mucym.xml
+  mDatasetName: Vuforia/mucym.xml
   mCastedBehaviour: {fileID: 641113651}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -3474,7 +3534,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.8e-44, y: 9e-44, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1, y: 1.0000001, z: 3e-44, w: 1.2166e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -4377,7 +4437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4437,7 +4497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2859109400176981367, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2859109400176981367, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4446,7 +4506,7 @@ PrefabInstance:
     - target: {fileID: -2859109400176981367, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 4ced57c878d541c45a45cf365e25888d, type: 2}
+      objectReference: {fileID: 2100000, guid: 0bf3fe356c6d98f49b2953168e229fe4, type: 2}
     - target: {fileID: -2584632067225726221, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -4494,6 +4554,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
       propertyPath: m_Name
       value: Juego de cuadritos de colores
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1132864644892456298, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4589,7 +4653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6068994618448522311, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6068994618448522311, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4598,7 +4662,7 @@ PrefabInstance:
     - target: {fileID: 6068994618448522311, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 4ced57c878d541c45a45cf365e25888d, type: 2}
+      objectReference: {fileID: 2100000, guid: 0f4ddb95226c59f46a4911bfa01c05fe, type: 2}
     - target: {fileID: 6167321314128379575, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6410,7 +6474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1363487375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6461,7 +6525,7 @@ MonoBehaviour:
   OnAutomaticHitTest:
     m_PersistentCalls:
       m_Calls: []
-  mDisplayAdvanced: 0
+  mDisplayAdvanced: 1
   mHitTestMode: 0
 --- !u!114 &1363487377
 MonoBehaviour:
@@ -6625,7 +6689,7 @@ MonoBehaviour:
   _victoryAnimator: {fileID: 2130372510}
   winnerAudio: {fileID: 0}
   loserAudio: {fileID: 0}
-  losePanel: {fileID: 0}
+  losePanel: {fileID: 2130372508}
 --- !u!114 &1380251748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7492,7 +7556,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 0f4ddb95226c59f46a4911bfa01c05fe, type: 2}
-  - {fileID: 2100000, guid: 4ced57c878d541c45a45cf365e25888d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8915,7 +8978,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 0f4ddb95226c59f46a4911bfa01c05fe, type: 2}
-  - {fileID: 2100000, guid: 4ced57c878d541c45a45cf365e25888d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9057,7 +9119,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769217833}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83dcd8dace8b7fe449d796b980cb121d, type: 3}
   m_Name: 
@@ -9134,7 +9196,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 0f4ddb95226c59f46a4911bfa01c05fe, type: 2}
-  - {fileID: 2100000, guid: 4ced57c878d541c45a45cf365e25888d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10141,7 +10202,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.839e-42, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 8.666298}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -10256,7 +10317,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0.2411971, z: 2.50179, w: 0.21753745}
+  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 2.7e-44, w: 1.3892e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -10470,7 +10531,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 0f4ddb95226c59f46a4911bfa01c05fe, type: 2}
-  - {fileID: 2100000, guid: 4ced57c878d541c45a45cf365e25888d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10922,7 +10982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 171787453609663908, guid: 8d2943710381d3b478dd6ca09ab1bb0d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5267412646615438082, guid: 8d2943710381d3b478dd6ca09ab1bb0d, type: 3}
       propertyPath: m_Pivot.x
