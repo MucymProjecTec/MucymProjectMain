@@ -20,11 +20,4 @@ public class PuzzlePiece : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezeAll;    //Freeze all the axis, the piece becomes 
         }
     }
-
-
-
-
-
-
-
 }

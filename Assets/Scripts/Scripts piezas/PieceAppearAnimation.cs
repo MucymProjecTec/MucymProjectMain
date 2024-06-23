@@ -15,9 +15,13 @@ public class PieceAppearAnimation : MonoBehaviour
     {
         // Guardar la posición final como la posición objetivo
         targetPosition = transform.position;
+
         // Inicializar la posición en una altura específica
         initialPosition = new Vector3(transform.position.x, appearHeight, transform.position.z);
         transform.position = initialPosition;
+
+        Debug.Log($"Iniciando animación de aparición en {initialPosition} hacia {targetPosition} con duración {appearDuration}s");
+
     }
 
     public void StartAppearAnimation()

@@ -8,6 +8,7 @@ public class LogicaJuego : MonoBehaviour
     [SerializeField] private List<GameObject> hexagonPieces;
     [SerializeField] private Collider triangleCollider;
     [SerializeField] private Collider hexagonCollider;
+
     private List<GameObject> currentPieces;
     private Collider currentCollider;
 
@@ -28,8 +29,10 @@ public class LogicaJuego : MonoBehaviour
 
         SetStage(1);
 
+        Debug.Log("Inicio");
+
         // Iniciar animación de aparición de las piezas del triángulo
-        StartCoroutine(AppearPieces(trianglePieces));
+        //StartCoroutine(AppearPieces(trianglePieces));
     }
 
     void Update()
@@ -89,13 +92,14 @@ public class LogicaJuego : MonoBehaviour
             currentPieces = trianglePieces;
             currentCollider = triangleCollider;
             cameraController.SetTarget(GameObject.Find("TriangleTarget").transform);
+            StartCoroutine(AppearPieces(currentPieces));
         }
         else if (stage == 2)
         {
             currentPieces = hexagonPieces;
             currentCollider = hexagonCollider;
             cameraController.SetTarget(GameObject.Find("HexagonTarget").transform);
-            StartCoroutine(AppearPieces(hexagonPieces));
+            StartCoroutine(AppearPieces(currentPieces));
         }
     }
 
