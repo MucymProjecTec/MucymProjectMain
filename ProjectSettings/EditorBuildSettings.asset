@@ -5,43 +5,43 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Intro.unity
     guid: 7d87ddc2701f9684cb7e1f45af54af16
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: b89987d0b747d64498006440a57e5111
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Herradura_QR.unity
     guid: a5fd56d113251584b95dafc0c8f98034
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Prueba.unity
     guid: 2a36190e3b8a2eb4dae826116ec3783f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Hanoi_QR.unity
     guid: 26b947fad6e47a742bc26dc00ec6d767
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FourEquationsScene_QR.unity
     guid: 8c63b8cf6fe8fc948adb209fe8a97da4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DisksScene_QR.unity
     guid: df05fe21f60fc724a85d3cee93b707ed
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RL&HM.unity
     guid: abdd42f7446e52f43b8848f2af1905f5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MagicSquare_QR.unity
     guid: 209e43432510edd429e31af7e9ae0122
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AllSums_QR.unity
     guid: b0dee15cc820b5c4f9af9ed534ed7730
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TPuzzle_2D.unity
     guid: 70ae5a648a77de747b9e69309cdb5019
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SolitaireChess_QR.unity
     guid: 30c4e0c0ae37d6b40ac22dbae21231d9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CuadroPiezasT.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
