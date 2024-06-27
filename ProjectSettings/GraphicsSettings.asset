@@ -41,10 +41,8 @@ GraphicsSettings:
   - {fileID: 17000, guid: 0000000000000000f000000000000000, type: 0}
   m_PreloadedShaders: []
   m_PreloadShadersBatchTimeLimit: -1
-  m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000,
-    type: 0}
-  m_CustomRenderPipeline: {fileID: 11400000, guid: cb559f0fce9b2fd48898845436141fd6,
-    type: 2}
+  m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_CustomRenderPipeline: {fileID: 0}
   m_TransparencySortMode: 0
   m_TransparencySortAxis: {x: 0, y: 0, z: 1}
   m_DefaultRenderingPath: 1
@@ -68,5 +66,6 @@ GraphicsSettings:
   m_DefaultRenderingLayerMask: 1
   m_LogWhenShaderIsCompiled: 0
   m_SRPDefaultSettings:
-    UnityEngine.Rendering.Universal.UniversalRenderPipeline: {fileID: 11400000, guid: e3e4a7e99373f7747b2128ea7fbc6fdd,
-      type: 2}
+    UnityEngine.Rendering.Universal.UniversalRenderPipeline: {fileID: 11400000, guid: e3e4a7e99373f7747b2128ea7fbc6fdd, type: 2}
+  m_CameraRelativeLightCulling: 0
+  m_CameraRelativeShadowCulling: 0
