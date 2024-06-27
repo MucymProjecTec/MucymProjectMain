@@ -12,7 +12,7 @@ public class LogicaJuego : MonoBehaviour
     private List<GameObject> currentPieces;
     private Collider currentCollider;
 
-    private UI_Manager4E _uiManager4E;
+    public UI_Manager4E _uiManager4E;
     public AudioSource audioFelicidades;
     public Animator _victoryAnimator;
 
@@ -22,9 +22,8 @@ public class LogicaJuego : MonoBehaviour
     void Start()
     {
         _uiManager4E = GameObject.Find("Canvas").GetComponent<UI_Manager4E>();
-        _uiManager4E.StartTimer();
-        //_victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>();
-
+        //_uiManager4E.StartTimer();
+        //_victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>(); //Victory Panel Calling
         cameraController = Camera.main.GetComponent<CameraController>();
 
         SetStage(1);
@@ -32,7 +31,8 @@ public class LogicaJuego : MonoBehaviour
         Debug.Log("Inicio");
 
         // Iniciar animación de aparición de las piezas del triángulo
-        //StartCoroutine(AppearPieces(trianglePieces));
+        StartCoroutine(AppearPieces(trianglePieces));
+        
     }
 
     void Update()

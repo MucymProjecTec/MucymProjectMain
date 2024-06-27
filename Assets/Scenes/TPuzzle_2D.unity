@@ -3723,7 +3723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   audioFelicidades: {fileID: 0}
-  _victoryAnimator: {fileID: 0}
+  _victoryAnimator: {fileID: 1050071017}
 --- !u!1 &1267895615
 GameObject:
   m_ObjectHideFlags: 0
