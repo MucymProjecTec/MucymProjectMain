@@ -11,7 +11,7 @@ public class PieceDetector : MonoBehaviour
             PieceManager piezaDetectada = other.GetComponent<PieceManager>(); // Obtener el ScriptableObject de la pieza detectada
             Debug.Log("Encontro la pieza");
             // Comprobar si el ScriptableObject de la pieza detectada es igual a "Center"
-            if (piezaDetectada.pieceData != null && piezaDetectada.pieceData.name == "Center" && piezaDetectada.pieceData.winCount < 3)
+            if (piezaDetectada.pieceData != null && piezaDetectada.pieceData.name == "Center" && piezaDetectada.pieceData.winCount == 3)
             {
                 // Incrementar el contador de victorias de esta pieza
                 piezaDetectada.pieceData.Suma();
@@ -27,7 +27,7 @@ public class PieceDetector : MonoBehaviour
             PieceManager piezaDetectada = other.GetComponent<PieceManager>(); // Obtener el ScriptableObject de la pieza detectada
             Debug.Log("Encontro la pieza");
             // Comprobar si el ScriptableObject de la pieza detectada es igual a "Center"
-            if (piezaDetectada.pieceData != null && piezaDetectada.pieceData.name == "Center" && piezaDetectada.pieceData.winCount > 0 )
+            if (piezaDetectada.pieceData != null && piezaDetectada.pieceData.name == "Center" && piezaDetectada.pieceData.winCount > 3 )
             {
                 // Incrementar el contador de victorias de esta pieza
                 piezaDetectada.pieceData.Resta();
