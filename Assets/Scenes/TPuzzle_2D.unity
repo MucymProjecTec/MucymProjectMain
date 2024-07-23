@@ -822,7 +822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316064190}
   m_LocalRotation: {x: -0, y: -0.9999966, z: -0, w: -0.0026181752}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0001, y: 0, z: 0.0233}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2435,7 +2435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937981514}
   m_LocalRotation: {x: -0.70710677, y: 0, z: 0, w: 0.70710677}
-  m_LocalPosition: {x: -2.483, y: -0.24200004, z: 1.8450005}
+  m_LocalPosition: {x: -2.483, y: -0.242, z: 2.837}
   m_LocalScale: {x: 3.868037, y: 3.8680375, z: 5.8020573}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3722,6 +3722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieces: []
+  coll: {fileID: 0}
   audioFelicidades: {fileID: 0}
   _victoryAnimator: {fileID: 0}
 --- !u!1 &1267895615
