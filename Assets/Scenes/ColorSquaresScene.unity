@@ -3135,7 +3135,19 @@ MonoBehaviour:
       m_Calls: []
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &641113651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3151,13 +3163,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: mucymtarget
+  mTrackableName: 5013125d-a34c-4ab3-96c2-7705e6436384
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Mucym.xml
-  mAspectRatio: 1.162791
+  mDataSetPath: Vuforia/mucym.xml
+  mAspectRatio: 1.16279
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 1.162791
+  mHeight: 1.16279
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -3177,6 +3189,7 @@ Transform:
   m_Children:
   - {fileID: 593063219}
   - {fileID: 960234739}
+  - {fileID: 1809587504}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3194,8 +3207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 641113651}
   mHiddenRoot: {fileID: 0}
-  mTargetName: mucymtarget
-  mDatasetName: Vuforia/Mucym.xml
+  mTargetName: 5013125d-a34c-4ab3-96c2-7705e6436384
+  mDatasetName: Vuforia/mucym.xml
   mCastedBehaviour: {fileID: 641113651}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -4310,6 +4323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Juego de cuadritos de colores
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1132864644892456298, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.00025045656
@@ -5338,7 +5355,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1380251747}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: HideTip
         m_Mode: 1
@@ -5627,7 +5644,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1380251747}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: ShowTip
         m_Mode: 1
@@ -6299,7 +6316,7 @@ GameObject:
   - component: {fileID: 1380251750}
   - component: {fileID: 1380251749}
   - component: {fileID: 1380251748}
-  - component: {fileID: 1380251747}
+  - component: {fileID: 1380251753}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6307,26 +6324,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1380251747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1380251746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca1e9ed70819e284b8db32f2d8aa4b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerLabel: {fileID: 114881856}
-  time: 0
-  startTimer: 0
-  tipPanel: {fileID: 1960027366}
-  _victoryAnimator: {fileID: 2130372510}
-  winnerAudio: {fileID: 0}
-  loserAudio: {fileID: 0}
-  losePanel: {fileID: 0}
 --- !u!114 &1380251748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6415,6 +6412,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1380251753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380251746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a71634ae0515e674ca5c7fd061393585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 114881856}
+  time: 0
+  startTimer: 0
+  tipPanel: {fileID: 1960027366}
+  _victoryAnimator: {fileID: 2130372510}
+  winnerAudio: {fileID: 0}
+  loserAudio: {fileID: 0}
+  losePanel: {fileID: 503800380}
 --- !u!1 &1380396004
 GameObject:
   m_ObjectHideFlags: 0
@@ -9020,6 +9037,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782429342}
   m_Mesh: {fileID: 4775165154151588797, guid: 60b068f40f1bcb64ebf00488b50b83cc, type: 3}
+--- !u!1 &1809587503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1809587504}
+  - component: {fileID: 1809587505}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1809587504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809587503}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.036258634, y: 0.09582698, z: 0.14187431}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 641113652}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1809587505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809587503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c327732f3471ec4e82ecc67ab768833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiManager: {fileID: 1380251753}
+  playerWon: 0
 --- !u!1 &1849667573
 GameObject:
   m_ObjectHideFlags: 0

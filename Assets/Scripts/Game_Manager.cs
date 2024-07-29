@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class GameManager : MonoBehaviour
+public class Game_Manager : MonoBehaviour
 {
     public event Action OnMainMenu;
     public event Action OnItemsMenu;
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public static GameManager instance;
+    public static Game_Manager instance;
 
     private void Awake()
     {

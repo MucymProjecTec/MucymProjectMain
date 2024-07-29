@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1999,7 +1999,7 @@ Transform:
   - {fileID: 830363759}
   - {fileID: 1963959675}
   m_Father: {fileID: 1939463421}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1042098322
 GameObject:
@@ -2436,7 +2436,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1939463421}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1258798930
 Light:
@@ -3793,7 +3793,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1939463421}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1724838611
 Light:
@@ -4133,7 +4133,7 @@ GameObject:
   - component: {fileID: 1939463421}
   - component: {fileID: 1939463420}
   - component: {fileID: 1939463419}
-  - component: {fileID: 1939463418}
+  - component: {fileID: 1939463422}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -4141,25 +4141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1939463418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939463417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1939463420}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 5013125d-a34c-4ab3-96c2-7705e6436384_scaled
-  mDatasetName: 
-  mCastedBehaviour: {fileID: 1939463420}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1939463419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4230,7 +4211,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1939463418}
+  mPreview: {fileID: 1939463422}
 --- !u!4 &1939463421
 Transform:
   m_ObjectHideFlags: 0
@@ -4249,6 +4230,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1939463422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939463417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1939463420}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 5013125d-a34c-4ab3-96c2-7705e6436384_scaled
+  mDatasetName: 
+  mCastedBehaviour: {fileID: 1939463420}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &1963959674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5297,7 +5297,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065a3eb91b8a84249961ec77082cdeaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pieces: []
+  pieces:
+  - {fileID: 1963959680}
+  - {fileID: 1963959679}
+  - {fileID: 1963959678}
+  - {fileID: 1963959677}
   coll: {fileID: 1963959730}
   audioFelicidades: {fileID: 0}
   _victoryAnimator: {fileID: 0}

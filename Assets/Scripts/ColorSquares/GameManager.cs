@@ -6,10 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private GameObject[] squares;
-    [SerializeField]
-    private Canvas canvas;
-    private UI_Manager4E uiManager;
-
+    public UI_Manager4E uiManager;
     public bool playerWon = false;
 
     void Start()
@@ -22,7 +19,8 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log("Found " + squares.Length + " puzzle pieces.");
-        uiManager = canvas.GetComponent<UI_Manager4E>();
+        //uiManager = canvas.GetComponent<UI_Manager4E>();
+
         if (uiManager == null)
         {
             Debug.LogError("UI_Manager4E not found on Canvas!");

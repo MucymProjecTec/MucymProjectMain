@@ -65,8 +65,8 @@ public class UI_Manager4E : MonoBehaviour
 
     public void ShowVictoryScreen()
     {
-        //Debug.Log("YOU WON!");
-        winnerAudio.Play();
+        Debug.Log("YOU WON!");
+        //winnerAudio.Play();
         _victoryAnimator.SetBool("ShowVictory", true);
     }
 
