@@ -3,27 +3,20 @@ using UnityEngine.SceneManagement;
 
 public class ScenesControllerScript : MonoBehaviour
 {
-    public void LoadCuadroPiezasT()
-    {
-        SceneManager.LoadScene("CuadroPiezasT");
-    }
-    public void LoadTrianguloHexa()
-    {
-        SceneManager.LoadScene("Triangulo-Hexagono");
-    }
+
     public void LoadDisksGame()
     {
-        SceneManager.LoadScene("DisksScene_QR");
+        SceneManager.LoadScene("DisksScene");
     }
 
     public void LoadFourEquations()
     {
-        SceneManager.LoadScene("FourEquationsScene_QR");
+        SceneManager.LoadScene("FourEquationsScene");
     }
 
     public void LoadRLHM()
     {
-        SceneManager.LoadScene("Hanoi_QR");
+        SceneManager.LoadScene("Hanoi");
     }
     public void LoadCubos()
     {
@@ -35,8 +28,9 @@ public class ScenesControllerScript : MonoBehaviour
     }
     public void LoadHerradura()
     {
-        SceneManager.LoadScene("Herradura_QR");
+        SceneManager.LoadScene("Herradura");
     }
+
 
     public void LoadColorSquares()
     {
@@ -45,7 +39,7 @@ public class ScenesControllerScript : MonoBehaviour
 
     public void LoadMagicSquare()
     {
-        SceneManager.LoadScene("MagicSquare_QR");
+        SceneManager.LoadScene("MagicSquare");
     }
 
     public void LoadTPuzzle()
@@ -54,7 +48,7 @@ public class ScenesControllerScript : MonoBehaviour
     }
     public void LoadSolitaireChess()
     {
-        SceneManager.LoadScene("SolitaireChess_QR");
+        SceneManager.LoadScene("SolitaireChess");
     }
 
     public void CloseGame()
