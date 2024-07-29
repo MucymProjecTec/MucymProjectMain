@@ -11,7 +11,7 @@ public class SelectedPieceEvents : MonoBehaviour
 
     public void ChangeToSelecteMaterial()
     {
-        renderer.material = selectedMaterial; //Change into selected mode wood material
+        renderer.material = selectedMaterial; //Change into selected mode, wood material
     }
 
     public void ChangeToUnelectedMaterial()
