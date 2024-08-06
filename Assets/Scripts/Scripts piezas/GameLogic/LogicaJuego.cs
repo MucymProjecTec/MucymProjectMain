@@ -8,11 +8,10 @@ public class LogicaJuego : MonoBehaviour
     [SerializeField] private List<GameObject> hexagonPieces;
     [SerializeField] private Collider triangleCollider;
     [SerializeField] private Collider hexagonCollider;
-
     private List<GameObject> currentPieces;
     private Collider currentCollider;
 
-    public UI_Manager4E _uiManager4E;
+    private UI_Manager4E _uiManager4E;
     public AudioSource audioFelicidades;
     public Animator _victoryAnimator;
 
@@ -22,17 +21,15 @@ public class LogicaJuego : MonoBehaviour
     void Start()
     {
         _uiManager4E = GameObject.Find("Canvas").GetComponent<UI_Manager4E>();
-        //_uiManager4E.StartTimer();
-        //_victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>(); //Victory Panel Calling
+        _uiManager4E.StartTimer();
+        _victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>();
+
         cameraController = Camera.main.GetComponent<CameraController>();
 
         SetStage(1);
 
-        Debug.Log("Inicio");
-
         // Iniciar animación de aparición de las piezas del triángulo
         StartCoroutine(AppearPieces(trianglePieces));
-        
     }
 
     void Update()
@@ -92,14 +89,13 @@ public class LogicaJuego : MonoBehaviour
             currentPieces = trianglePieces;
             currentCollider = triangleCollider;
             cameraController.SetTarget(GameObject.Find("TriangleTarget").transform);
-            StartCoroutine(AppearPieces(currentPieces));
         }
         else if (stage == 2)
         {
             currentPieces = hexagonPieces;
             currentCollider = hexagonCollider;
             cameraController.SetTarget(GameObject.Find("HexagonTarget").transform);
-            StartCoroutine(AppearPieces(currentPieces));
+            StartCoroutine(AppearPieces(hexagonPieces));
         }
     }
 

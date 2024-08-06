@@ -10,9 +10,9 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        GameManager.instance.OnMainMenu += ActivateMainMenu;
-        GameManager.instance.OnItemsMenu += ActivateItemsMenu;
-        GameManager.instance.OnArPosition += ActivateARPosition;
+        Game_Manager.instance.OnMainMenu += ActivateMainMenu;
+        Game_Manager.instance.OnItemsMenu += ActivateItemsMenu;
+        Game_Manager.instance.OnArPosition += ActivateARPosition;
     }
 
     private void ActivateMainMenu()

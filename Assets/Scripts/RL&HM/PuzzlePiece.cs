@@ -17,7 +17,14 @@ public class PuzzlePiece : MonoBehaviour
     {
         if (!selectable.IsSelected)
         {
-            rb.constraints = RigidbodyConstraints.FreezeAll;    //Freeze all the axis, the piece becomes 
+            rb.constraints = RigidbodyConstraints.FreezeAll;    //Freeze all the axis, the piece stops moving inmediately
         }
     }
+
+
+
+
+
+
+
 }
