@@ -6,16 +6,20 @@ public class TPuzzleManager : MonoBehaviour
 {
     [SerializeField]    private List<GameObject> pieces;
     private UI_Manager4E _uiManager4E;
-    private  PieceManager piezaDetectada;
+    public  PieceManager piezaDetectada;
     public AudioSource audioFelicidades;
     public Animator _victoryAnimator;
     // Start is called before the first frame update
     void Start()
     {
         _uiManager4E = GameObject.Find("Canvas").GetComponent<UI_Manager4E>();
-        _uiManager4E.StartTimer();
+        
         _victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>(); //Victory Panel Calling
         piezaDetectada = GetComponent<PieceManager>();
+
+        if (_uiManager4E != null) {
+            _uiManager4E.StartTimer();
+        }
     }
 
     // Update is called once per frame
@@ -24,7 +28,7 @@ public class TPuzzleManager : MonoBehaviour
         //Victory Condition
         if (piezaDetectada.pieceData.winCount == 3) {    
             piezaDetectada.pieceData.winCount = 0;               
-            _uiManager4E.StopTimer();
+            //_uiManager4E.StopTimer();
             ShowVictoryScreen();
         }
     }

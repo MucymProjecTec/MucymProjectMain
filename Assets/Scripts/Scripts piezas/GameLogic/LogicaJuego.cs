@@ -21,8 +21,8 @@ public class LogicaJuego : MonoBehaviour
     void Start()
     {
         _uiManager4E = GameObject.Find("Canvas").GetComponent<UI_Manager4E>();
-        _uiManager4E.StartTimer();
-        _victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>();
+        //_uiManager4E.StartTimer();
+        //_victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>();
 
         cameraController = Camera.main.GetComponent<CameraController>();
 

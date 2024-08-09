@@ -1077,9 +1077,9 @@ GameObject:
   - component: {fileID: 402999564}
   - component: {fileID: 402999563}
   - component: {fileID: 402999562}
+  - component: {fileID: 402999569}
   - component: {fileID: 402999561}
   - component: {fileID: 402999560}
-  - component: {fileID: 402999559}
   - component: {fileID: 402999558}
   - component: {fileID: 402999567}
   - component: {fileID: 402999566}
@@ -1099,7 +1099,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402999556}
   m_LocalRotation: {x: 0, y: 0.70710677, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: -2.492, y: -0.24, z: 0.789}
+  m_LocalPosition: {x: -2.704, y: -0.24, z: 1.359}
   m_LocalScale: {x: 3.868037, y: 3.8680375, z: 5.8020573}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1121,68 +1121,6 @@ MonoBehaviour:
   renderer: {fileID: 402999564}
   originalMaterial: {fileID: 2100000, guid: 0f4ddb95226c59f46a4911bfa01c05fe, type: 2}
   selectedMaterial: {fileID: 2100000, guid: 0bf3fe356c6d98f49b2953168e229fe4, type: 2}
---- !u!114 &402999559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402999556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83dcd8dace8b7fe449d796b980cb121d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selfSelected: 0
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1612758099}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1963959734}
-        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
-        m_MethodName: ChangeToSelecteMaterial
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1963959734}
-        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
-        m_MethodName: ChangeToUnelectedMaterial
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  use: 0
-  onSelectedFinger:
-    m_PersistentCalls:
-      m_Calls: []
-  onSelectedFingerUp:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &402999560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1318,7 +1256,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402999556}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ba5ab23b8fd6848899444e7f59062fed, type: 2}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
@@ -1336,6 +1274,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a526e51fbef6c4ca959eb8a77c8aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &402999569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402999556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09701ad8c75042f4b92c01fa1c62fe12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfSelected: 0
+  onSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 402999558}
+        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
+        m_MethodName: ChangeToSelecteMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDeselected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 402999558}
+        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
+        m_MethodName: ChangeToUnelectedMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  use: 0
+  onSelectedFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &474506652 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4356871704648752660, guid: f6eba2b2224e9d649a52772e630784b0, type: 3}
@@ -2413,9 +2401,9 @@ GameObject:
   - component: {fileID: 937981522}
   - component: {fileID: 937981521}
   - component: {fileID: 937981520}
+  - component: {fileID: 937981527}
   - component: {fileID: 937981519}
   - component: {fileID: 937981518}
-  - component: {fileID: 937981517}
   - component: {fileID: 937981516}
   - component: {fileID: 937981524}
   - component: {fileID: 937981525}
@@ -2435,7 +2423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937981514}
   m_LocalRotation: {x: 0, y: 0.70710677, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: -3.83, y: -0.24, z: 1.89}
+  m_LocalPosition: {x: -2.692, y: -0.24, z: 1.335}
   m_LocalScale: {x: 3.868037, y: 3.8680375, z: 5.8020573}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2457,68 +2445,6 @@ MonoBehaviour:
   renderer: {fileID: 937981522}
   originalMaterial: {fileID: 2100000, guid: 0f4ddb95226c59f46a4911bfa01c05fe, type: 2}
   selectedMaterial: {fileID: 2100000, guid: 0bf3fe356c6d98f49b2953168e229fe4, type: 2}
---- !u!114 &937981517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937981514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83dcd8dace8b7fe449d796b980cb121d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selfSelected: 0
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1612758099}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1963959734}
-        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
-        m_MethodName: ChangeToSelecteMaterial
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1963959734}
-        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
-        m_MethodName: ChangeToUnelectedMaterial
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  use: 0
-  onSelectedFinger:
-    m_PersistentCalls:
-      m_Calls: []
-  onSelectedFingerUp:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &937981518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2641,7 +2567,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937981514}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ba5ab23b8fd6848899444e7f59062fed, type: 2}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
@@ -2672,6 +2598,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a526e51fbef6c4ca959eb8a77c8aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &937981527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937981514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09701ad8c75042f4b92c01fa1c62fe12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfSelected: 0
+  onSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 937981516}
+        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
+        m_MethodName: ChangeToSelecteMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDeselected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 937981516}
+        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
+        m_MethodName: ChangeToUnelectedMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  use: 0
+  onSelectedFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1042098322
 GameObject:
   m_ObjectHideFlags: 0
@@ -3089,10 +3065,10 @@ GameObject:
   - component: {fileID: 1235784105}
   - component: {fileID: 1235784104}
   - component: {fileID: 1235784103}
-  - component: {fileID: 1235784102}
+  - component: {fileID: 1235784110}
   - component: {fileID: 1235784101}
-  - component: {fileID: 1235784100}
   - component: {fileID: 1235784099}
+  - component: {fileID: 1235784102}
   - component: {fileID: 1235784107}
   - component: {fileID: 1235784108}
   - component: {fileID: 1235784109}
@@ -3111,7 +3087,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235784097}
   m_LocalRotation: {x: 0, y: 0.70710677, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: -2.614, y: -0.24, z: 2.2}
+  m_LocalPosition: {x: -2.669, y: -0.24, z: 1.332}
   m_LocalScale: {x: 3.868037, y: 3.8680375, z: 5.8020573}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3133,68 +3109,6 @@ MonoBehaviour:
   renderer: {fileID: 1235784105}
   originalMaterial: {fileID: 2100000, guid: 0f4ddb95226c59f46a4911bfa01c05fe, type: 2}
   selectedMaterial: {fileID: 2100000, guid: 0bf3fe356c6d98f49b2953168e229fe4, type: 2}
---- !u!114 &1235784100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235784097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83dcd8dace8b7fe449d796b980cb121d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selfSelected: 0
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1612758099}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1963959734}
-        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
-        m_MethodName: ChangeToSelecteMaterial
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1963959734}
-        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
-        m_MethodName: ChangeToUnelectedMaterial
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  use: 0
-  onSelectedFinger:
-    m_PersistentCalls:
-      m_Calls: []
-  onSelectedFingerUp:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1235784101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3317,7 +3231,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235784097}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ba5ab23b8fd6848899444e7f59062fed, type: 2}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
@@ -3348,6 +3262,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a526e51fbef6c4ca959eb8a77c8aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1235784110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235784097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09701ad8c75042f4b92c01fa1c62fe12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfSelected: 0
+  onSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1235784099}
+        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
+        m_MethodName: ChangeToSelecteMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  onDeselected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1235784099}
+        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
+        m_MethodName: ChangeToUnelectedMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  use: 0
+  onSelectedFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1258798928
 GameObject:
   m_ObjectHideFlags: 0
@@ -3476,9 +3440,9 @@ GameObject:
   - component: {fileID: 1266964674}
   - component: {fileID: 1266964673}
   - component: {fileID: 1266964672}
+  - component: {fileID: 1266964679}
   - component: {fileID: 1266964671}
   - component: {fileID: 1266964670}
-  - component: {fileID: 1266964669}
   - component: {fileID: 1266964668}
   - component: {fileID: 1266964677}
   - component: {fileID: 1266964678}
@@ -3497,7 +3461,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266964666}
   m_LocalRotation: {x: 0, y: 0.70710677, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: -1.68, y: -0.24, z: 0.954}
+  m_LocalPosition: {x: -2.698, y: -0.24, z: 1.35}
   m_LocalScale: {x: 3.868037, y: 3.8680375, z: 5.8020573}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3519,68 +3483,6 @@ MonoBehaviour:
   renderer: {fileID: 1266964674}
   originalMaterial: {fileID: 2100000, guid: 0f4ddb95226c59f46a4911bfa01c05fe, type: 2}
   selectedMaterial: {fileID: 2100000, guid: 0bf3fe356c6d98f49b2953168e229fe4, type: 2}
---- !u!114 &1266964669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266964666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83dcd8dace8b7fe449d796b980cb121d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selfSelected: 0
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1612758099}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1963959734}
-        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
-        m_MethodName: ChangeToSelecteMaterial
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1963959734}
-        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
-        m_MethodName: ChangeToUnelectedMaterial
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  use: 0
-  onSelectedFinger:
-    m_PersistentCalls:
-      m_Calls: []
-  onSelectedFingerUp:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1266964670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3722,8 +3624,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieces: []
+  piezaDetectada: {fileID: 1266964677}
   audioFelicidades: {fileID: 0}
   _victoryAnimator: {fileID: 1050071017}
+--- !u!114 &1266964679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266964666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09701ad8c75042f4b92c01fa1c62fe12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfSelected: 0
+  onSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1266964668}
+        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
+        m_MethodName: ChangeToSelecteMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDeselected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1266964668}
+        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
+        m_MethodName: ChangeToUnelectedMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  use: 0
+  onSelectedFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1267895615
 GameObject:
   m_ObjectHideFlags: 0
@@ -5507,7 +5460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 253163178520347450, guid: f6eba2b2224e9d649a52772e630784b0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.58
+      value: 1.71
       objectReference: {fileID: 0}
     - target: {fileID: 907695417731960468, guid: f6eba2b2224e9d649a52772e630784b0, type: 3}
       propertyPath: m_CastShadows
