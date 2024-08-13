@@ -52,7 +52,6 @@ public class GameLogic : MonoBehaviour
 
         //Victory Condition
         if (pieces.Count == 4) {                   
-            _uiManager4E.StopTimer();
             ShowVictoryScreen();
         }
     }
