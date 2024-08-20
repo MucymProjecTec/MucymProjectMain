@@ -123,6 +123,136 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &97789091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 97789092}
+  - component: {fileID: 97789094}
+  - component: {fileID: 97789093}
+  - component: {fileID: 97789096}
+  - component: {fileID: 97789095}
+  m_Layer: 5
+  m_Name: Joystick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &97789092
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97789091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 587277848}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 125, y: 100}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &97789093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97789091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 48c0d4d6bebaa934384b07aa1e2f8184, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &97789094
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97789091}
+  m_CullTransparentMesh: 1
+--- !u!114 &97789095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97789091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d677f1681015749b15c436eec6d880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MovementRange: 50
+  m_DynamicOriginRange: 100
+  m_ControlPath: <Joystick>/stick
+  m_Behaviour: 0
+  m_UseIsolatedInputActions: 0
+  m_PointerDownAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  m_PointerMoveAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+--- !u!191 &97789096
+OffMeshLink:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97789091}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_AreaIndex: 0
+  m_AgentTypeID: 0
+  m_Start: {fileID: 0}
+  m_End: {fileID: 0}
+  m_CostOverride: -1
+  m_BiDirectional: 1
+  m_Activated: 1
+  m_AutoUpdatePositions: 0
 --- !u!1 &157989831
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5267412646615438082, guid: 8d2943710381d3b478dd6ca09ab1bb0d, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5267412646615438082, guid: 8d2943710381d3b478dd6ca09ab1bb0d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1082,8 +1212,6 @@ GameObject:
   - component: {fileID: 402999559}
   - component: {fileID: 402999558}
   - component: {fileID: 402999567}
-  - component: {fileID: 402999566}
-  - component: {fileID: 402999568}
   m_Layer: 0
   m_Name: T_4
   m_TagString: PuzzlePiece
@@ -1298,18 +1426,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402999556}
   m_Mesh: {fileID: -5495902117074765545, guid: 2e2273d405a155c43a22e1f51ae7c86b, type: 3}
---- !u!114 &402999566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402999556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a66dc0eb4f4ea4a958aca979ef5560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &402999567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1323,18 +1439,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.032676812, y: 0.026033457, z: 0.029999997}
   m_Center: {x: 0.053681668, y: 0.10632507, z: 0.015000042}
---- !u!114 &402999568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402999556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4a526e51fbef6c4ca959eb8a77c8aa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &474506652 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4356871704648752660, guid: f6eba2b2224e9d649a52772e630784b0, type: 3}
@@ -1739,6 +1843,7 @@ RectTransform:
   - {fileID: 1642575289}
   - {fileID: 643189864}
   - {fileID: 1050071016}
+  - {fileID: 97789092}
   - {fileID: 239890353}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2413,8 +2518,6 @@ GameObject:
   - component: {fileID: 937981517}
   - component: {fileID: 937981516}
   - component: {fileID: 937981524}
-  - component: {fileID: 937981525}
-  - component: {fileID: 937981526}
   m_Layer: 0
   m_Name: T_2
   m_TagString: PuzzlePiece
@@ -2642,30 +2745,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.026192041, y: 0.024857882, z: 0.030000001}
   m_Center: {x: -0.121417135, y: 0.10791488, z: 0.015000049}
---- !u!114 &937981525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937981514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a66dc0eb4f4ea4a958aca979ef5560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &937981526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937981514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4a526e51fbef6c4ca959eb8a77c8aa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1042098322
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,8 +3167,6 @@ GameObject:
   - component: {fileID: 1235784100}
   - component: {fileID: 1235784099}
   - component: {fileID: 1235784107}
-  - component: {fileID: 1235784108}
-  - component: {fileID: 1235784109}
   m_Layer: 0
   m_Name: T_1
   m_TagString: PuzzlePiece
@@ -3317,30 +3394,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.030519782, y: 0.033009294, z: 0.030000001}
   m_Center: {x: 0.011364278, y: 0.025673894, z: 0.015000043}
---- !u!114 &1235784108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235784097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a66dc0eb4f4ea4a958aca979ef5560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1235784109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235784097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4a526e51fbef6c4ca959eb8a77c8aa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1258798928
 GameObject:
   m_ObjectHideFlags: 0
@@ -3473,8 +3526,6 @@ GameObject:
   - component: {fileID: 1266964670}
   - component: {fileID: 1266964669}
   - component: {fileID: 1266964668}
-  - component: {fileID: 1266964677}
-  - component: {fileID: 1266964678}
   m_Layer: 0
   m_Name: T_3
   m_TagString: PuzzlePiece
@@ -3689,30 +3740,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266964666}
   m_Mesh: {fileID: -5495902117074765545, guid: 2e2273d405a155c43a22e1f51ae7c86b, type: 3}
---- !u!114 &1266964677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266964666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a66dc0eb4f4ea4a958aca979ef5560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1266964678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266964666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d07e0c1dae645644281a9e8f6cedbb7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1267895615
 GameObject:
   m_ObjectHideFlags: 0
