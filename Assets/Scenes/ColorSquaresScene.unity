@@ -6419,7 +6419,7 @@ MonoBehaviour:
   _victoryAnimator: {fileID: 2130372510}
   winnerAudio: {fileID: 0}
   loserAudio: {fileID: 0}
-  losePanel: {fileID: 503800380}
+  losePanel: {fileID: 0}
 --- !u!1 &1380396004
 GameObject:
   m_ObjectHideFlags: 0
