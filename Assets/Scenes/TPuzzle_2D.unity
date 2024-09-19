@@ -1099,7 +1099,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402999556}
   m_LocalRotation: {x: 0, y: 0.70710677, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: -2.704, y: -0.24, z: 1.359}
+  m_LocalPosition: {x: -3.083, y: -0.24, z: 1.582}
   m_LocalScale: {x: 3.868037, y: 3.8680375, z: 5.8020573}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2039,12 +2039,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'El reto de este juego, consiste en forma un solo cuadrado en el medio
-    de la caja deslizando las figuras.
+  m_Text: 'El reto de este juego, consiste en forma una T con las figuras del tablero.
 
 
-    Primero selecciona la pieza y luego
-    la mueves en la direccion que deseas. Estas se deslizaran a la direccion deseada.'
+    Primero
+    selecciona la pieza y luego la mueves en la direccion que deseas. Estas se deslizaran
+    a la direccion deseada.'
 --- !u!222 &731339467
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2423,7 +2423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937981514}
   m_LocalRotation: {x: 0, y: 0.70710677, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: -2.692, y: -0.24, z: 1.335}
+  m_LocalPosition: {x: -2.085, y: -0.24, z: 1.335}
   m_LocalScale: {x: 3.868037, y: 3.8680375, z: 5.8020573}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3087,7 +3087,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235784097}
   m_LocalRotation: {x: 0, y: 0.70710677, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: -2.669, y: -0.24, z: 1.332}
+  m_LocalPosition: {x: -3.42, y: -0.24, z: 1.332}
   m_LocalScale: {x: 3.868037, y: 3.8680375, z: 5.8020573}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3461,7 +3461,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266964666}
   m_LocalRotation: {x: 0, y: 0.70710677, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: -2.698, y: -0.24, z: 1.35}
+  m_LocalPosition: {x: -2.207, y: -0.24, z: 1.854}
   m_LocalScale: {x: 3.868037, y: 3.8680375, z: 5.8020573}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4757,8 +4757,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1386214673}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: LoadCubos
+        m_TargetAssemblyTypeName: ScenesControllerScript, Assembly-CSharp
+        m_MethodName: LoadTPuzzle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
