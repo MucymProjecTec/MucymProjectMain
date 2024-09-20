@@ -40,8 +40,7 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 11400000, guid: 73b55699be2011a4cba7df6167fe8adb,
-      type: 2}
+    customRenderPipeline: {fileID: 11400000, guid: 73b55699be2011a4cba7df6167fe8adb, type: 2}
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Low
@@ -77,8 +76,7 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 11400000, guid: 4d1093d339b4d0b4ebd23b7f24d83561,
-      type: 2}
+    customRenderPipeline: {fileID: 11400000, guid: 4d1093d339b4d0b4ebd23b7f24d83561, type: 2}
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Medium
@@ -114,8 +112,7 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 11400000, guid: 5a5436271ebe2074096bdffac27e97e1,
-      type: 2}
+    customRenderPipeline: {fileID: 11400000, guid: 5a5436271ebe2074096bdffac27e97e1, type: 2}
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: High
@@ -151,8 +148,7 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 11400000, guid: 4d53cbfb65ebc674ba3a09530591e760,
-      type: 2}
+    customRenderPipeline: {fileID: 11400000, guid: 4d53cbfb65ebc674ba3a09530591e760, type: 2}
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Very High
@@ -188,8 +184,7 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 11400000, guid: cb559f0fce9b2fd48898845436141fd6,
-      type: 2}
+    customRenderPipeline: {fileID: 11400000, guid: cb559f0fce9b2fd48898845436141fd6, type: 2}
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
     Android: 2
@@ -198,6 +193,7 @@ QualitySettings:
     Nintendo Switch: 4
     PS4: 4
     PSP2: 2
+    Server: 0
     Stadia: 4
     Standalone: 4
     WebGL: 3

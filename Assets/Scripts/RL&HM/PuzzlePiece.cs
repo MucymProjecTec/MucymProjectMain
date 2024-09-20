@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class PuzzlePiece : MonoBehaviour
 {
-        LeanSelectableByFinger selectable;
-        Rigidbody rb;
-        void Start()
-        {
+    LeanSelectableByFinger selectable;
+    Rigidbody rb;
+    void Start()
+    {
         selectable = GetComponent<LeanSelectableByFinger>();
         rb = transform.GetComponent<Rigidbody>();               //to transform it into a rigidbody
     }
@@ -20,11 +20,5 @@ public class PuzzlePiece : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezeAll;    //Freeze all the axis, the piece stops moving inmediately
         }
     }
-
-
-
-
-
-
 
 }
