@@ -6,7 +6,7 @@ public class ScenesControllerScript : MonoBehaviour
 
     public void LoadDisksGame()
     {
-        SceneManager.LoadScene("DisksScene");
+        SceneManager.LoadScene("DisksScene_QR");
     }
 
     public void LoadFourEquations()
