@@ -44,7 +44,7 @@ public class ScenesControllerScript : MonoBehaviour
 
     public void LoadTPuzzle()
     {
-        SceneManager.LoadScene("TPuzzle");
+        SceneManager.LoadScene("NewCuatroT");
     }
     public void LoadSolitaireChess()
     {

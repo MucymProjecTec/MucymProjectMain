@@ -6,9 +6,10 @@ public class BlockDetection : MonoBehaviour
 {
     // Assign these materials from the Inspector
     public Material defaultMaterial;     // Material when no object is nearby
-    public Material intangibleMaterial;  // Material when another object is detected
+    public Material intangibleMaterial;  // Material when two or more objects are detected
 
     private Renderer objRenderer;
+    private int objectCount = 0;         // Counter to track how many objects are in the trigger zone
 
     void Start()
     {
@@ -22,20 +23,35 @@ public class BlockDetection : MonoBehaviour
     // Called when another object enters the trigger
     void OnTriggerEnter(Collider other)
     {
-        // Change to intangible material when an object is detected
-        objRenderer.material = intangibleMaterial;
+        // Increment object count when an object enters the trigger
+        objectCount++;
+
+        // If two or more objects are in the trigger zone, change to the intangible material
+        if (objectCount >= 2)
+        {
+            objRenderer.material = intangibleMaterial;
+        }
     }
 
     void OnTriggerStay(Collider other)
     {
-        //Maintain the intangible material
-        objRenderer.material = intangibleMaterial;
+        // Maintain the intangible material if two or more objects are still inside
+        if (objectCount >= 2)
+        {
+            objRenderer.material = intangibleMaterial;
+        }
     }
 
     // Called when another object exits the trigger
     void OnTriggerExit(Collider other)
     {
-        // Change back to the default material when the object leaves the trigger
-        objRenderer.material = defaultMaterial;
+        // Decrement object count when an object leaves the trigger
+        objectCount--;
+
+        // If fewer than two objects are inside, change back to the default material
+        if (objectCount < 2)
+        {
+            objRenderer.material = defaultMaterial;
+        }
     }
 }
