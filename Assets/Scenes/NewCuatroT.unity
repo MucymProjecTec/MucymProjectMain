@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1342,6 +1342,7 @@ RectTransform:
   - {fileID: 643189864}
   - {fileID: 1050071016}
   - {fileID: 239890353}
+  - {fileID: 1413099273}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.18100001, y: 0, z: 0}
@@ -1699,6 +1700,8 @@ GameObject:
   - component: {fileID: 765117704}
   - component: {fileID: 765117703}
   - component: {fileID: 765117702}
+  - component: {fileID: 765117711}
+  - component: {fileID: 765117712}
   m_Layer: 0
   m_Name: T_4
   m_TagString: PuzzlePiece
@@ -1744,6 +1747,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1803,7 +1818,7 @@ MonoBehaviour:
     IgnoreStartedOverGui: 1
     RequiredFingerCount: 0
     RequiredMouseButtons: 0
-    RequiredSelectable: {fileID: 0}
+    RequiredSelectable: {fileID: 1676909438}
   _camera: {fileID: 0}
   sensitivity: 1
   damping: -1
@@ -1832,8 +1847,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9627168, y: 1.834432, z: 2.08866}
-  m_Center: {x: -0.035209596, y: 0.22068074, z: 2.054167}
+  m_Size: {x: 0.029999997, y: 0.019999994, z: 0.01997842}
+  m_Center: {x: -0.000107191016, y: 0.0000000036023913, z: 0.02053563}
 --- !u!65 &765117707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1845,8 +1860,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7446203, y: 1.9853315, z: 3.6153216}
-  m_Center: {x: -0.0023038588, y: 0.39613, z: -0.8314834}
+  m_Size: {x: 0.017172879, y: 0.020012474, z: 0.034973558}
+  m_Center: {x: 0.00006354099, y: 0.0000062379004, z: -0.008813282}
 --- !u!54 &765117708
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1913,6 +1928,43 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765117700}
   m_Mesh: {fileID: -5495902117074765545, guid: bf91c68184a436249a52244c2f298d3a, type: 3}
+--- !u!114 &765117711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765117700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f56b4b5483a7d49b5f028d41751c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  joystick: {fileID: 1413099274}
+--- !u!114 &765117712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765117700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e36e320eaf0d047a678430d1c647e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Use:
+    Filter: 0
+    IgnoreStartedOverGui: 1
+    RequiredFingerCount: 0
+    RequiredMouseButtons: 0
+    RequiredSelectable: {fileID: 765117702}
+  _camera: {fileID: 0}
+  sensitivity: 1
+  damping: -1
+  inertia: 0
+  remainingTranslation: {x: 0, y: 0, z: 0}
 --- !u!1 &784999099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,6 +2319,8 @@ GameObject:
   - component: {fileID: 908607754}
   - component: {fileID: 908607753}
   - component: {fileID: 908607752}
+  - component: {fileID: 908607761}
+  - component: {fileID: 908607762}
   m_Layer: 0
   m_Name: T_3
   m_TagString: PuzzlePiece
@@ -2312,6 +2366,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2371,7 +2437,7 @@ MonoBehaviour:
     IgnoreStartedOverGui: 1
     RequiredFingerCount: 0
     RequiredMouseButtons: 0
-    RequiredSelectable: {fileID: 0}
+    RequiredSelectable: {fileID: 1676909438}
   _camera: {fileID: 0}
   sensitivity: 1
   damping: -1
@@ -2400,8 +2466,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.1299608, y: 1.0422325, z: 2.1908457}
-  m_Center: {x: 0.022100583, y: -0.10765119, z: 2.134868}
+  m_Size: {x: 0.029999992, y: 0.019999994, z: 0.018852953}
+  m_Center: {x: -0.00010715874, y: 0.0000000057638254, z: 0.021098325}
 --- !u!65 &908607757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2413,8 +2479,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6998949, y: 1.5557129, z: 3.688986}
-  m_Center: {x: 0.027351774, y: 0.08132084, z: -0.7760488}
+  m_Size: {x: 0.016818956, y: 0.019592403, z: 0.035677437}
+  m_Center: {x: -0.00014865022, y: -0.00020374692, z: -0.008461309}
 --- !u!54 &908607758
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2481,6 +2547,43 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908607750}
   m_Mesh: {fileID: -5495902117074765545, guid: bf91c68184a436249a52244c2f298d3a, type: 3}
+--- !u!114 &908607761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908607750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f56b4b5483a7d49b5f028d41751c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  joystick: {fileID: 1413099274}
+--- !u!114 &908607762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908607750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e36e320eaf0d047a678430d1c647e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Use:
+    Filter: 0
+    IgnoreStartedOverGui: 1
+    RequiredFingerCount: 0
+    RequiredMouseButtons: 0
+    RequiredSelectable: {fileID: 908607752}
+  _camera: {fileID: 0}
+  sensitivity: 1
+  damping: -1
+  inertia: 0
+  remainingTranslation: {x: 0, y: 0, z: 0}
 --- !u!1 &1025168551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,6 +2602,8 @@ GameObject:
   - component: {fileID: 1025168555}
   - component: {fileID: 1025168554}
   - component: {fileID: 1025168553}
+  - component: {fileID: 1025168562}
+  - component: {fileID: 1025168563}
   m_Layer: 0
   m_Name: T_2
   m_TagString: PuzzlePiece
@@ -2544,6 +2649,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SelectedPieceEvents, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2603,7 +2720,7 @@ MonoBehaviour:
     IgnoreStartedOverGui: 1
     RequiredFingerCount: 0
     RequiredMouseButtons: 0
-    RequiredSelectable: {fileID: 0}
+    RequiredSelectable: {fileID: 1676909438}
   _camera: {fileID: 0}
   sensitivity: 1
   damping: -1
@@ -2632,8 +2749,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.037748, y: 1.382955, z: 2.1090899}
-  m_Center: {x: -0.03233702, y: -0.005057757, z: 2.122437}
+  m_Size: {x: 0.029999997, y: 0.019999994, z: 0.018798865}
+  m_Center: {x: -0.00010716566, y: 0.0000000036023913, z: 0.021125464}
 --- !u!65 &1025168558
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2645,8 +2762,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 1.6671453, z: 2}
-  m_Center: {x: -0.050196238, y: 0.1370374, z: -0.8752338}
+  m_Size: {x: 0.016776618, y: 0.019232469, z: 0.033680886}
+  m_Center: {x: 0.0001691095, y: -0.00038374687, z: -0.00945958}
 --- !u!54 &1025168559
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2713,6 +2830,43 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025168551}
   m_Mesh: {fileID: -5495902117074765545, guid: bf91c68184a436249a52244c2f298d3a, type: 3}
+--- !u!114 &1025168562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025168551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f56b4b5483a7d49b5f028d41751c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  joystick: {fileID: 1413099274}
+--- !u!114 &1025168563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025168551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e36e320eaf0d047a678430d1c647e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Use:
+    Filter: 0
+    IgnoreStartedOverGui: 1
+    RequiredFingerCount: 0
+    RequiredMouseButtons: 0
+    RequiredSelectable: {fileID: 1025168553}
+  _camera: {fileID: 0}
+  sensitivity: 1
+  damping: -1
+  inertia: 0
+  remainingTranslation: {x: 0, y: 0, z: 0}
 --- !u!1 &1042098322
 GameObject:
   m_ObjectHideFlags: 0
@@ -3301,6 +3455,115 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219278495}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1231230607
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 587277848}
+    m_Modifications:
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.50503
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.50503
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.50503
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_Name
+      value: Fixed Joystick
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
 --- !u!1 &1258798928
 GameObject:
   m_ObjectHideFlags: 0
@@ -4087,6 +4350,22 @@ RectTransform:
   m_AnchoredPosition: {x: 181, y: 103.8}
   m_SizeDelta: {x: 361.57953, y: 200.60696}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &1413099273 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+  m_PrefabInstance: {fileID: 1231230607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1413099274 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+  m_PrefabInstance: {fileID: 1231230607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1423478183
 GameObject:
   m_ObjectHideFlags: 0
@@ -4832,6 +5111,8 @@ GameObject:
   - component: {fileID: 1676909440}
   - component: {fileID: 1676909439}
   - component: {fileID: 1676909438}
+  - component: {fileID: 1676909448}
+  - component: {fileID: 1676909447}
   m_Layer: 0
   m_Name: T_1
   m_TagString: PuzzlePiece
@@ -4936,7 +5217,7 @@ MonoBehaviour:
     IgnoreStartedOverGui: 1
     RequiredFingerCount: 0
     RequiredMouseButtons: 0
-    RequiredSelectable: {fileID: 0}
+    RequiredSelectable: {fileID: 1676909438}
   _camera: {fileID: 0}
   sensitivity: 1
   damping: -1
@@ -4965,8 +5246,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7999699, y: 1.636444, z: 3.8781247}
-  m_Center: {x: -0.002739892, y: 0.17668648, z: -0.73206145}
+  m_Size: {x: 0.016617533, y: 0.020937884, z: 0.029504599}
+  m_Center: {x: 0.00021848126, y: 0.0004689553, z: -0.011547709}
 --- !u!65 &1676909443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4978,8 +5259,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9493704, y: 0.37308234, z: 2.0881276}
-  m_Center: {x: -0.0017160062, y: 1.1865412, z: 2.0440643}
+  m_Size: {x: 0.029999992, y: 0.020221997, z: 0.019307774}
+  m_Center: {x: -0.00010718871, y: 0.00011101273, z: 0.020870937}
 --- !u!54 &1676909444
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5046,6 +5327,43 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676909436}
   m_Mesh: {fileID: -5495902117074765545, guid: bf91c68184a436249a52244c2f298d3a, type: 3}
+--- !u!114 &1676909447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676909436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f56b4b5483a7d49b5f028d41751c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  joystick: {fileID: 1413099274}
+--- !u!114 &1676909448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676909436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e36e320eaf0d047a678430d1c647e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Use:
+    Filter: 0
+    IgnoreStartedOverGui: 1
+    RequiredFingerCount: 0
+    RequiredMouseButtons: 0
+    RequiredSelectable: {fileID: 1676909438}
+  _camera: {fileID: 0}
+  sensitivity: 1
+  damping: -1
+  inertia: 0
+  remainingTranslation: {x: 0, y: 0, z: 0}
 --- !u!1 &1692880867
 GameObject:
   m_ObjectHideFlags: 0
