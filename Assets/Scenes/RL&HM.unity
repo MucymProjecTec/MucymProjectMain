@@ -1652,7 +1652,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'El reto de este juego, consiste en forma un solo cuadrado en el medio
+  m_Text: 'El reto de este juego, consiste en formar un solo cuadrado perfecto dentro
     de la caja deslizando las figuras.
 
 
@@ -3475,7 +3475,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Desliza las figuras
+  m_Text: Deslice el cuadrado
 --- !u!222 &1606760896
 CanvasRenderer:
   m_ObjectHideFlags: 0
