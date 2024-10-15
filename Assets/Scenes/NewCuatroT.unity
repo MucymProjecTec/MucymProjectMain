@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1697,7 +1697,6 @@ GameObject:
   - component: {fileID: 765117707}
   - component: {fileID: 765117706}
   - component: {fileID: 765117705}
-  - component: {fileID: 765117704}
   - component: {fileID: 765117703}
   - component: {fileID: 765117702}
   - component: {fileID: 765117711}
@@ -1801,29 +1800,6 @@ MonoBehaviour:
   renderer: {fileID: 765117709}
   originalMaterial: {fileID: 2100000, guid: 3c38749b365ce9545a4c970bb25b2ee2, type: 2}
   selectedMaterial: {fileID: 2100000, guid: 0bf3fe356c6d98f49b2953168e229fe4, type: 2}
---- !u!114 &765117704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765117700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eda371e5375f454490a86f21559ee38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Use:
-    Filter: 0
-    IgnoreStartedOverGui: 1
-    RequiredFingerCount: 0
-    RequiredMouseButtons: 0
-    RequiredSelectable: {fileID: 1676909438}
-  _camera: {fileID: 0}
-  sensitivity: 1
-  damping: -1
-  inertia: 0
-  remainingTranslation: {x: 0, y: 0, z: 0}
 --- !u!114 &765117705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2316,7 +2292,6 @@ GameObject:
   - component: {fileID: 908607757}
   - component: {fileID: 908607756}
   - component: {fileID: 908607755}
-  - component: {fileID: 908607754}
   - component: {fileID: 908607753}
   - component: {fileID: 908607752}
   - component: {fileID: 908607761}
@@ -2420,29 +2395,6 @@ MonoBehaviour:
   renderer: {fileID: 908607759}
   originalMaterial: {fileID: 2100000, guid: abf12e1cb91d66c428baf97a586bc0f9, type: 2}
   selectedMaterial: {fileID: 2100000, guid: 0bf3fe356c6d98f49b2953168e229fe4, type: 2}
---- !u!114 &908607754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 908607750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eda371e5375f454490a86f21559ee38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Use:
-    Filter: 0
-    IgnoreStartedOverGui: 1
-    RequiredFingerCount: 0
-    RequiredMouseButtons: 0
-    RequiredSelectable: {fileID: 1676909438}
-  _camera: {fileID: 0}
-  sensitivity: 1
-  damping: -1
-  inertia: 0
-  remainingTranslation: {x: 0, y: 0, z: 0}
 --- !u!114 &908607755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2599,7 +2551,6 @@ GameObject:
   - component: {fileID: 1025168558}
   - component: {fileID: 1025168557}
   - component: {fileID: 1025168556}
-  - component: {fileID: 1025168555}
   - component: {fileID: 1025168554}
   - component: {fileID: 1025168553}
   - component: {fileID: 1025168562}
@@ -2703,29 +2654,6 @@ MonoBehaviour:
   renderer: {fileID: 1025168560}
   originalMaterial: {fileID: 2100000, guid: 3c38749b365ce9545a4c970bb25b2ee2, type: 2}
   selectedMaterial: {fileID: 2100000, guid: 0bf3fe356c6d98f49b2953168e229fe4, type: 2}
---- !u!114 &1025168555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025168551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eda371e5375f454490a86f21559ee38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Use:
-    Filter: 0
-    IgnoreStartedOverGui: 1
-    RequiredFingerCount: 0
-    RequiredMouseButtons: 0
-    RequiredSelectable: {fileID: 1676909438}
-  _camera: {fileID: 0}
-  sensitivity: 1
-  damping: -1
-  inertia: 0
-  remainingTranslation: {x: 0, y: 0, z: 0}
 --- !u!114 &1025168556
 MonoBehaviour:
   m_ObjectHideFlags: 0
