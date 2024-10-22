@@ -12,10 +12,12 @@ public class BlockDetectionCajon : MonoBehaviour
     private int objectCount = 0;         // Counter to track how many objects are in the trigger zone
     public Animator _victoryAnimator;     // Reference to the victory animator
     private BlockDetection[] blockDetectors; // Array to hold references to all BlockDetection scripts
+    public static bool IsVictory = false; // Track the victory state
 
     void Start()
     {
         // Get the Renderer component to access the material
+
         objRenderer = GetComponent<Renderer>();
         _victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>(); // Victory Panel Calling
 
@@ -34,12 +36,7 @@ public class BlockDetectionCajon : MonoBehaviour
             // Increment object count when a valid piece enters the trigger
             objectCount++;
 
-            // Check if none of the block detectors are intangible
-            if (objectCount >= 10 && !IsAnyBlockDetectorIntangible()) // Check intangible flag
-            {
-                Debug.Log("¡Las 4 piezas han sido colocadas correctamente!");
-                _victoryAnimator.SetBool("ShowVictory", true);
-            }
+          
         }
     }
 
@@ -50,15 +47,18 @@ public class BlockDetectionCajon : MonoBehaviour
 
         // Check the state of the BlockDetection instances and log the result
         bool anyIntangible = IsAnyBlockDetectorIntangible();
+
+        // Log the current intangible state
         Debug.Log("Is any block detector intangible?: " + anyIntangible);
 
         // Check if we can trigger the victory condition
-        if (objectCount >= 10)
+        if (objectCount >= 8)
         {
             if (!anyIntangible) // Check intangible flag
             {
                 Debug.Log("¡Las 4 piezas han sido colocadas correctamente!");
                 _victoryAnimator.SetBool("ShowVictory", true);
+                IsVictory = true; // Set victory state to true
             }
             else
             {
@@ -66,6 +66,7 @@ public class BlockDetectionCajon : MonoBehaviour
             }
         }
     }
+
 
     void OnTriggerExit(Collider other)
     {
@@ -81,11 +82,12 @@ public class BlockDetectionCajon : MonoBehaviour
     {
         foreach (var detector in blockDetectors)
         {
-            if (detector.GetObjectCount() >= 2) // Check each detector's intangible state
+            if (detector.GetObjectCount() >= 1) // Check each detector's intangible state
             {
                 return true; // Return true if any are intangible
             }
         }
+        Debug.Log("It's FALSE");
         return false; // Return false if none are intangible
     }
 }

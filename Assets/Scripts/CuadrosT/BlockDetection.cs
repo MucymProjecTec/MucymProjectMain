@@ -29,7 +29,7 @@ public class BlockDetection : MonoBehaviour
             objectCount++;
 
             // If two or more objects are in the trigger zone, change to the intangible material
-            if (objectCount >= 2)
+            if (objectCount >= 1)
             {
                 objRenderer.material = intangibleMaterial;
             }
@@ -39,7 +39,7 @@ public class BlockDetection : MonoBehaviour
     void OnTriggerStay(Collider other)
     {
         // Maintain the intangible material if two or more objects are still inside
-        if (objectCount >= 2)
+        if (objectCount >= 1)
         {
             objRenderer.material = intangibleMaterial;
         }
@@ -54,7 +54,7 @@ public class BlockDetection : MonoBehaviour
             objectCount--;
 
             // If fewer than two objects are inside, change back to the default material
-            if (objectCount < 2)
+            if (objectCount < 1)
             {
                 objRenderer.material = defaultMaterial;
             }
