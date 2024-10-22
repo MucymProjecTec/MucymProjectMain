@@ -2036,9 +2036,10 @@ GameObject:
   - component: {fileID: 830363760}
   - component: {fileID: 830363763}
   - component: {fileID: 830363764}
+  - component: {fileID: 830363765}
   m_Layer: 0
   m_Name: Cajon
-  m_TagString: Untagged
+  m_TagString: PuzzleZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2163,6 +2164,21 @@ MonoBehaviour:
   MaxY: 0
   SnapX: 0
   SnapY: 0
+--- !u!114 &830363765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830363758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bf610adff59b84f8b434c3ca5eb5c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pieceTag: PuzzlePiece
+  wallTag: PuzzleWall
+  totalPieces: 4
 --- !u!1 &854335412
 GameObject:
   m_ObjectHideFlags: 0
@@ -4632,8 +4648,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.5868864, z: 1}
-  m_Center: {x: 0, y: 0.79344285, z: 0}
+  m_Size: {x: 1.5385015, y: 2.5868862, z: 2.4940484}
+  m_Center: {x: -0.026531544, y: 0.7934428, z: -0.060251575}
 --- !u!54 &1476606045
 Rigidbody:
   m_ObjectHideFlags: 0

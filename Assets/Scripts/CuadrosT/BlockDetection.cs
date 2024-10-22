@@ -24,12 +24,15 @@ public class BlockDetection : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Increment object count when an object enters the trigger
-        objectCount++;
-
-        // If two or more objects are in the trigger zone, change to the intangible material
-        if (objectCount >= 2)
+        if (other.CompareTag("PuzzlePiece"))
         {
-            objRenderer.material = intangibleMaterial;
+            objectCount++;
+
+            // If two or more objects are in the trigger zone, change to the intangible material
+            if (objectCount >= 2)
+            {
+                objRenderer.material = intangibleMaterial;
+            }
         }
     }
 
@@ -46,12 +49,21 @@ public class BlockDetection : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         // Decrement object count when an object leaves the trigger
-        objectCount--;
-
-        // If fewer than two objects are inside, change back to the default material
-        if (objectCount < 2)
+        if (other.CompareTag("PuzzlePiece"))
         {
-            objRenderer.material = defaultMaterial;
+            objectCount--;
+
+            // If fewer than two objects are inside, change back to the default material
+            if (objectCount < 2)
+            {
+                objRenderer.material = defaultMaterial;
+            }
         }
+    }
+
+    // Method to check the number of objects in the trigger zone
+    public int GetObjectCount()
+    {
+        return objectCount;
     }
 }
