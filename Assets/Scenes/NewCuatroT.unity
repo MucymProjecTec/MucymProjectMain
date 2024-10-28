@@ -442,6 +442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuscaUnPlano
       objectReference: {fileID: 0}
+    - target: {fileID: 171787453609663908, guid: 8d2943710381d3b478dd6ca09ab1bb0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5267412646615438082, guid: 8d2943710381d3b478dd6ca09ab1bb0d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1668,12 +1672,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'El reto de este juego, consiste en forma un solo cuadrado en el medio
-    de la caja deslizando las figuras.
-
-
-    Primero selecciona la pieza y luego
-    la mueves en la direccion que deseas. Estas se deslizaran a la direccion deseada.'
+  m_Text: "El reto de este juego consiste en que las 4 pezas en forma de T dentro
+    del cuadro peque\xF1o sin tocar las barreras.\n\nToca las piezas y deslizalas,
+    si requieres que roten entonces utiliza el an\xE1logo en la esquina inferior
+    izquierda"
 --- !u!222 &731339467
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2012,8 +2014,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' Observar unos segundos la figura antes de mover te da una idea de como
-    acomodarlo'
+  m_Text: "Recuerda que puedes rotar las piezas con el an\xE1logo, no temas en usarlo"
 --- !u!222 &784999102
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4863,7 +4864,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Desliza las figuras
+  m_Text: 'Colocar T en Marco
+
+'
 --- !u!222 &1606760896
 CanvasRenderer:
   m_ObjectHideFlags: 0
