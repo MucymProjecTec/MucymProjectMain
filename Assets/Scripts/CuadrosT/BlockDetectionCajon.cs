@@ -42,27 +42,18 @@ public class BlockDetectionCajon : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        // Log the current count of pieces
-        Debug.Log("Current pieces in the zone: " + objectCount);
 
         // Check the state of the BlockDetection instances and log the result
         bool anyIntangible = IsAnyBlockDetectorIntangible();
 
-        // Log the current intangible state
-        Debug.Log("Is any block detector intangible?: " + anyIntangible);
 
         // Check if we can trigger the victory condition
         if (objectCount >= 8)
         {
             if (!anyIntangible) // Check intangible flag
             {
-                Debug.Log("¡Las 4 piezas han sido colocadas correctamente!");
                 _victoryAnimator.SetBool("ShowVictory", true);
                 IsVictory = true; // Set victory state to true
-            }
-            else
-            {
-                Debug.Log("Cannot show victory; at least one block is intangible.");
             }
         }
     }
@@ -87,7 +78,6 @@ public class BlockDetectionCajon : MonoBehaviour
                 return true; // Return true if any are intangible
             }
         }
-        Debug.Log("It's FALSE");
         return false; // Return false if none are intangible
     }
 }
