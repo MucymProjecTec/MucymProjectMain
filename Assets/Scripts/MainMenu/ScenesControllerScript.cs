@@ -55,6 +55,11 @@ public class ScenesControllerScript : MonoBehaviour
         SceneManager.LoadScene("Prueba-TriHex");
     }
 
+    public void LoadCuadrosT()
+    {
+        SceneManager.LoadScene("NewCuatroT");
+    }
+
     public void CloseGame()
     {
         Application.Quit();

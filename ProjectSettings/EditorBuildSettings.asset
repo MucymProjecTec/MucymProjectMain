@@ -42,8 +42,8 @@ EditorBuildSettings:
     path: Assets/Scenes/SolitaireChess_QR.unity
     guid: 30c4e0c0ae37d6b40ac22dbae21231d9
   - enabled: 1
-    path: Assets/Scenes/CuadroPiezasT.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/NewCuatroT.unity
+    guid: f516f122e46336a42b4648b78b4c5455
   - enabled: 1
     path: Assets/Scenes/Prueba-TriHex.unity
     guid: e88305136dd694442a1ce2469535f57d
