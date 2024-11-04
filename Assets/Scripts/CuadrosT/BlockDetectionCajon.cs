@@ -4,80 +4,68 @@ using UnityEngine;
 
 public class BlockDetectionCajon : MonoBehaviour
 {
-    // Assign these materials from the Inspector
-    public Material defaultMaterial;     // Material when no object is nearby
-    public Material intangibleMaterial;  // Material when four pieces are detected
+    public Material defaultMaterial;
+    public Material intangibleMaterial;
+    public Animator _victoryAnimator; // Assign in Inspector for better performance
+    public static bool IsVictory = false;
 
     private Renderer objRenderer;
-    private int objectCount = 0;         // Counter to track how many objects are in the trigger zone
-    public Animator _victoryAnimator;     // Reference to the victory animator
-    private BlockDetection[] blockDetectors; // Array to hold references to all BlockDetection scripts
-    public static bool IsVictory = false; // Track the victory state
+    private int objectCount = 0;
+    private BlockDetection[] blockDetectors;
 
     void Start()
     {
-        // Get the Renderer component to access the material
-
         objRenderer = GetComponent<Renderer>();
-        _victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>(); // Victory Panel Calling
-
-        // Find all instances of BlockDetection in the scene
         blockDetectors = FindObjectsOfType<BlockDetection>();
-
-        // Set the object's material to the default at the start
         objRenderer.material = defaultMaterial;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        // Only count objects with the tag "PuzzlePiece"
         if (other.CompareTag("PuzzlePiece"))
         {
-            // Increment object count when a valid piece enters the trigger
             objectCount++;
-
-          
+            CheckVictoryCondition();
         }
     }
-
-    void OnTriggerStay(Collider other)
-    {
-
-        // Check the state of the BlockDetection instances and log the result
-        bool anyIntangible = IsAnyBlockDetectorIntangible();
-
-
-        // Check if we can trigger the victory condition
-        if (objectCount >= 8)
-        {
-            if (!anyIntangible) // Check intangible flag
-            {
-                _victoryAnimator.SetBool("ShowVictory", true);
-                IsVictory = true; // Set victory state to true
-            }
-        }
-    }
-
 
     void OnTriggerExit(Collider other)
     {
-        // Only decrement the counter if the piece has the tag "PuzzlePiece"
         if (other.CompareTag("PuzzlePiece"))
         {
             objectCount--;
+            CheckVictoryCondition();
         }
     }
 
-    // Method to check if any BlockDetection is intangible
+    private void CheckVictoryCondition()
+    {
+        bool anyIntangible = IsAnyBlockDetectorIntangible();
+
+        if (objectCount >= 8 && !anyIntangible)
+        {
+            if (!IsVictory) // Prevent re-triggering
+            {
+                _victoryAnimator.SetBool("ShowVictory", true);
+                IsVictory = true;
+            }
+        }
+        else if (IsVictory) // Reset if conditions aren't met
+        {
+            _victoryAnimator.SetBool("ShowVictory", false);
+            IsVictory = false;
+        }
+    }
+
     private bool IsAnyBlockDetectorIntangible()
     {
         foreach (var detector in blockDetectors)
         {
-            if (detector.GetObjectCount() >= 1) // Check each detector's intangible state
+            if (detector.GetObjectCount() >= 1)
             {
-                return true; // Return true if any are intangible
+                return true;
             }
         }
-        return false; // Return false if none are intangible
+        return false;
     }
 }
