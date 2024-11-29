@@ -9,6 +9,7 @@ public class WinCondition : MonoBehaviour
     void Update()
     {
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1f, Color.yellow);
+        
     }
 
     public bool CheckWinCondition()
@@ -21,6 +22,7 @@ public class WinCondition : MonoBehaviour
             {
                 //Get number of the disk on bottom
                 int diskSize = hit.transform.gameObject.GetComponent<HanoiDisk>().size;
+                Debug.Log(diskSize);
                 if (diskSize == expectedValue) //Disk in front is the one expected. game is complete
                     return true;
                 else

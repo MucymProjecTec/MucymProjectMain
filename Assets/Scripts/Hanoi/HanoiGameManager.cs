@@ -33,6 +33,7 @@ public class HanoiGameManager : MonoBehaviour
         {
             if(!columnTwo[i].CheckWinCondition())
             {
+                Debug.Log("no win");
                 condition = false;
                 break;
             }
