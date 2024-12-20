@@ -4,49 +4,65 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour
 {
-    // Velocidad de rotación
-    public float rotationSpeed = 100f;
+    private int tapCount = 0; // Cuenta los toques
+    private float tapResetTime = 0.5f; // Tiempo permitido entre los toques
+    private float lastTapTime = 0f; // Registro del tiempo del último toque
+    private bool isSelected = false; // Indica si la pieza está seleccionada
+    private int currentPosition = 1; // Posición inicial
 
-    // Referencia al joystick (arrastra tu joystick aquí en el Inspector)
-    public Joystick joystick; // Asegúrate de usar el tipo correcto de joystick
-
-    // Variable estática para la pieza seleccionada actualmente
-    public static Rotation CurrentSelectedObject; // Cambia a tipo Rotation
-
-    private void OnMouseDown()
-    {
-        // Al hacer clic, esta pieza se convierte en la seleccionada
-        if (CurrentSelectedObject != null)
-        {
-            CurrentSelectedObject.Deselect(); // Deseleccionar la pieza anterior
-        }
-        CurrentSelectedObject = this; // Asignar esta pieza como la seleccionada
-        Highlight(); // Opcional: Resaltar la pieza seleccionada
-    }
-
-    private void Highlight()
-    {
-        // Aquí puedes agregar lógica para resaltar la pieza seleccionada
-        GetComponent<Renderer>().material.color = Color.yellow; // Ejemplo de resaltado
-    }
-
-    public void Deselect()
-    {
-        // Restablecer el color u otros efectos al deseleccionar
-        GetComponent<Renderer>().material.color = Color.white; // Restablecer al color original
-    }
-
-    // Actualiza cada frame
     void Update()
     {
-        // Verifica si esta pieza está seleccionada
-        if (CurrentSelectedObject == this)
+        // Resetea el contador de toques si pasa el tiempo límite
+        if (Time.time - lastTapTime > tapResetTime)
         {
-            // Captura la entrada del joystick
-            float horizontalInput = joystick.Horizontal; // O el nombre correcto según tu joystick
-
-            // Aplica la rotación en el eje Y basado en la entrada del joystick
-            transform.Rotate(Vector3.up, horizontalInput * rotationSpeed * Time.deltaTime, Space.World);
+            tapCount = 0;
         }
+    }
+
+    public void OnSelect()
+    {
+        isSelected = true; // Marca la pieza como seleccionada
+        HandleTap();
+    }
+
+    public void OnDeselect()
+    {
+        isSelected = false; // Desmarca la pieza como seleccionada
+    }
+
+    private void HandleTap()
+    {
+        if (!isSelected) return; // Solo rota si la pieza está seleccionada
+
+        tapCount++;
+        lastTapTime = Time.time;
+
+        if (tapCount == 2) // Si hay dos toques consecutivos
+        {
+            RotatePiece();
+            tapCount = 0; // Reinicia el contador
+        }
+    }
+
+    private void RotatePiece()
+    {
+        Debug.Log("Rotating piece...");
+        // Obtén la rotación actual
+        Vector3 currentRotation = transform.eulerAngles;
+
+        // Cambia únicamente el valor de Y (suma 90 grados)
+        currentRotation.y += 90f;
+
+        // Aplica la nueva rotación
+        transform.eulerAngles = currentRotation;
+
+        // Actualiza la posición actual (si se necesita para lógica futura)
+        currentPosition = (currentPosition % 4) + 1;
+        Debug.Log("New position: " + currentPosition);
+    }
+
+    public int GetPosition()
+    {
+        return currentPosition;
     }
 }
