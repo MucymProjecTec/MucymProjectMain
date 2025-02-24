@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class LogicaJuego : MonoBehaviour
 {
     [SerializeField] private List<GameObject> trianglePieces;
     [SerializeField] private List<GameObject> hexagonPieces;
-    public GameObject trianglePiecesContainer;  
+    [SerializeField] private Collider triangleCollider;
+    [SerializeField] private Collider hexagonCollider;
     private List<GameObject> currentPieces;
     private Collider currentCollider;
 
@@ -17,9 +17,6 @@ public class LogicaJuego : MonoBehaviour
 
     private int currentStage = 1; // 1: triángulo, 2: hexágono
     private CameraController cameraController;
-
-    private bool triangleCompleted = false;
-    private bool hexagonCompleted = false;
 
     void Start()
     {
@@ -37,37 +34,37 @@ public class LogicaJuego : MonoBehaviour
 
     void Update()
     {
-        if (!triangleCompleted && CheckIfTriangleComplete())
-        {
-            triangleCompleted = true;
-        }
-        else if (!hexagonCompleted && CheckIfHexagonComplete())
-        {
-            hexagonCompleted = true;
-        }
-
-        if (triangleCompleted && hexagonCompleted)
-        {
-            ShowVictoryScreen();
-        }
+        // No hay lógica en el Update por el momento.
     }
-
 
     public void ShowVictoryScreen()
     {
         _victoryAnimator.SetBool("ShowVictory", true);
     }
 
-    // Verifica si todas las piezas del triángulo están en la posición correcta
-    private bool CheckIfTriangleComplete()
+    private void OnTriggerStay(Collider other)
     {
-        return trianglePieces.All(piece => piece.GetComponent<PieceCheckPosition>().GetIsInCorrectPosition());
-    }
+        if (!(currentPieces.Contains(other.gameObject)) && FullyContains(other, currentCollider))
+        {
+            currentPieces.Add(other.gameObject);
+        }
+        else if ((currentPieces.Contains(other.gameObject)) && !FullyContains(other, currentCollider))
+        {
+            currentPieces.Remove(other.gameObject);
+        }
 
-    // Verifica si todas las piezas del hexágono están en la posición correcta
-    private bool CheckIfHexagonComplete()
-    {
-        return hexagonPieces.All(piece => piece.GetComponent<PieceCheckPosition>().GetIsInCorrectPosition());
+        // Condición de victoria para triángulo
+        if (currentStage == 1 && currentPieces.Count == trianglePieces.Count)
+        {
+            _uiManager4E.StopTimer();
+            SetStage(2);
+        }
+        // Condición de victoria para hexágono
+        else if (currentStage == 2 && currentPieces.Count == hexagonPieces.Count)
+        {
+            _uiManager4E.StopTimer();
+            ShowVictoryScreen();
+        }
     }
 
     bool FullyContains(Collider resident, Collider zone, float tolerance = .02f)
@@ -90,8 +87,15 @@ public class LogicaJuego : MonoBehaviour
         if (stage == 1)
         {
             currentPieces = trianglePieces;
+            currentCollider = triangleCollider;
             cameraController.SetTarget(GameObject.Find("TriangleTarget").transform);
-            trianglePiecesContainer.SetActive(true);
+        }
+        else if (stage == 2)
+        {
+            currentPieces = hexagonPieces;
+            currentCollider = hexagonCollider;
+            cameraController.SetTarget(GameObject.Find("HexagonTarget").transform);
+            StartCoroutine(AppearPieces(hexagonPieces));
         }
     }
 
