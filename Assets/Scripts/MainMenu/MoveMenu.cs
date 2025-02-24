@@ -22,7 +22,7 @@ public class MoveMenu : MonoBehaviour
         //float step = 4 * Time.deltaTime;
 
         if (otherMenu != null) { 
-        otherMenu.position = Vector3.MoveTowards(otherMenu.position, targetMove.position, 10);
+        otherMenu.position = Vector3.MoveTowards(otherMenu.position, targetMove.position, 100);
         }
 
     }
