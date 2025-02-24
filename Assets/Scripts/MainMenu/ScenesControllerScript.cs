@@ -6,17 +6,17 @@ public class ScenesControllerScript : MonoBehaviour
 
     public void LoadDisksGame()
     {
-        SceneManager.LoadScene("DisksScene_QR");
+        SceneManager.LoadScene("DisksScene");
     }
 
     public void LoadFourEquations()
     {
-        SceneManager.LoadScene("FourEquationsScene_QR");
+        SceneManager.LoadScene("FourEquationsScene");
     }
 
     public void LoadRLHM()
     {
-        SceneManager.LoadScene("Hanoi_QR");
+        SceneManager.LoadScene("Hanoi");
     }
     public void LoadCubos()
     {
@@ -28,8 +28,9 @@ public class ScenesControllerScript : MonoBehaviour
     }
     public void LoadHerradura()
     {
-        SceneManager.LoadScene("Herradura_QR");
+        SceneManager.LoadScene("Herradura");
     }
+
 
     public void LoadColorSquares()
     {
@@ -38,26 +39,16 @@ public class ScenesControllerScript : MonoBehaviour
 
     public void LoadMagicSquare()
     {
-        SceneManager.LoadScene("MagicSquare_QR");
+        SceneManager.LoadScene("MagicSquare");
     }
 
     public void LoadTPuzzle()
     {
-        SceneManager.LoadScene("TPuzzle_2D");
+        SceneManager.LoadScene("NewCuatroT");
     }
     public void LoadSolitaireChess()
     {
-        SceneManager.LoadScene("SolitaireChess_QR");
-    }
-
-    public void LoadTrianguloHexagono()
-    {
-        SceneManager.LoadScene("Prueba-TriHex");
-    }
-
-    public void LoadCuadrosT()
-    {
-        SceneManager.LoadScene("NewCuatroT");
+        SceneManager.LoadScene("SolitaireChess");
     }
 
     public void CloseGame()

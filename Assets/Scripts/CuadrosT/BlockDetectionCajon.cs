@@ -61,7 +61,7 @@ public class BlockDetectionCajon : MonoBehaviour
     {
         foreach (var detector in blockDetectors)
         {
-            if (detector.GetObjectCount() >= 1)
+           // if (detector.GetObjectCount() >= 1)
             {
                 return true;
             }
