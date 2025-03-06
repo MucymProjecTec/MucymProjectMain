@@ -14,12 +14,22 @@ public class GameLogic : MonoBehaviour
     void Start()
     {
         _uiManager4E = GameObject.Find("Canvas").GetComponent<UI_Manager4E>();
+
+        UI_Manager4E[] uiManagers = FindObjectsOfType<UI_Manager4E>(true);
+
+        if (uiManagers.Length > 0)
+        {
+            _uiManager4E = uiManagers[0];  // Assign the first found instance
+        }
+
         
         _victoryAnimator = GameObject.Find("VictoryPanel").GetComponent<Animator>(); //Victory Panel Calling
         if (_uiManager4E != null) {
             _uiManager4E.StartTimer();
         }
+
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -31,6 +41,7 @@ public class GameLogic : MonoBehaviour
     public void ShowVictoryScreen()
     {
         _victoryAnimator.SetBool("ShowVictory", true);
+        _uiManager4E.StopTimer();
         
     }
 
