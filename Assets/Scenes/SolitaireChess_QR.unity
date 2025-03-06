@@ -1553,7 +1553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.60784316}
+  m_Color: {r: 0, g: 0.100729704, b: 1, a: 0.60784316}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4111,7 +4111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0.2665577, b: 1, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4423,7 +4423,7 @@ RectTransform:
   m_GameObject: {fileID: 1380583242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 395536097}
@@ -4432,7 +4432,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -303.2, y: 155}
+  m_AnchoredPosition: {x: -203.9, y: 155}
   m_SizeDelta: {x: 68.36719, y: 69.727875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1380583244
@@ -5150,12 +5150,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Tu misi\xF3n es clara: intercambia las bolinchas Azules con las Rojas
-    en este desaf\xEDo.\nMueve una bolincha a un espacio vac\xEDo con un solo toque,
-    pero sigue estas pautas:\r\nPuedes realizar saltos con una bolincha, avanzando
-    una o dos posiciones.\r\nRecuerda que solo puedes usar un color de bolincha por
-    turno.\r\nSolo se permite avanzar diagonalmente.\n\xBFPreparado para enfrentar
-    este estimulante reto?\n\n"
+  m_Text: "Objetivo: Intercambiar las bolinchas Azules con las Rojas en este desaf\xEDo.\n\nControles:
+    Mueve una bolincha a un espacio vac\xEDo con un solo toque, pero sigue estas
+    pautas:\r\nPuedes realizar saltos con una bolincha, avanzando una o dos posiciones.\r\nSolo
+    puedes usar un color de bolincha por turno.\r\nSolo se permite avanzar diagonalmente.\n\n\n"
 --- !u!222 &1742571361
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5701,7 +5699,7 @@ RectTransform:
   m_GameObject: {fileID: 1885050167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 752008114}
@@ -5709,7 +5707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -365.04, y: 155}
+  m_AnchoredPosition: {x: -328.5, y: 155}
   m_SizeDelta: {x: 55.316437, y: 55.708633}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1885050169

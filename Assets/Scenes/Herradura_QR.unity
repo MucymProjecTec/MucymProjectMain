@@ -884,7 +884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.60784316}
+  m_Color: {r: 0.019820213, g: 0, b: 1, a: 0.60784316}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2163,7 +2163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0.12117052, b: 1, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2284,7 +2284,7 @@ RectTransform:
   m_GameObject: {fileID: 1380583242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 395536097}
@@ -2293,7 +2293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -303.2, y: 155}
+  m_AnchoredPosition: {x: -237, y: 155}
   m_SizeDelta: {x: 68.36719, y: 69.727875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1380583244
@@ -2714,12 +2714,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "El reto de este juego consiste en colocar las bolinchas de color Azul
-    donde est\xE1n posicionadas las Rojas y las Rojas dejarlas posicionadas en las
-    bolinchas de color Azul.\n\nToca una bolincha para moverla, esta autom\xE1ticamente
-    se mueve donde est\xE9 vac\xEDo si se cumple con las siguientes condiciones:\nLas
-    bolinchas pueden hacer un salto o dos, cuando se hacen dos saltos la siguente
-    bolicha tiene que ser de otro color.\n\n"
+  m_Text: "Objetivo; colocar las bolinchas de color Azul donde est\xE1n posicionadas
+    las Rojas y las Rojas dejarlas posicionadas en las bolinchas de color Azul.\n\nControles:
+    Toca una bolincha para moverla, esta autom\xE1ticamente se mueve donde est\xE9
+    vac\xEDo si se cumple con las siguientes condiciones:\nLas bolinchas pueden hacer
+    un salto o dos, cuando se hacen dos saltos la siguente bolicha tiene que ser
+    de otro color.\n\n"
 --- !u!222 &1742571361
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2949,7 +2949,7 @@ RectTransform:
   m_GameObject: {fileID: 1885050167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 752008114}
@@ -2957,7 +2957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -365.04, y: 155}
+  m_AnchoredPosition: {x: -345, y: 155}
   m_SizeDelta: {x: 55.316437, y: 55.708633}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1885050169
