@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BlockDetection : MonoBehaviour
 {
+    // Assign these materials from the Inspector
     public Material defaultMaterial;     // Material when no object is nearby
-    public Material intangibleMaterial;  // Material when one or more objects are detected
+    public Material intangibleMaterial;  // Material when two or more objects are detected
 
     private Renderer objRenderer;
     private int objectCount = 0;         // Counter to track how many objects are in the trigger zone
@@ -15,53 +16,42 @@ public class BlockDetection : MonoBehaviour
         // Get the Renderer component to access the material
         objRenderer = GetComponent<Renderer>();
 
-        // Initialize material to default
-        SetMaterial(defaultMaterial);
+        // Set the object's material to the default at the start
+        objRenderer.material = defaultMaterial;
     }
 
+    // Called when another object enters the trigger
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("PuzzlePiece"))
+        // Increment object count when an object enters the trigger
+        objectCount++;
+
+        // If two or more objects are in the trigger zone, change to the intangible material
+        if (objectCount >= 2)
         {
-            objectCount++;
-            UpdateMaterial();
+            objRenderer.material = intangibleMaterial;
         }
     }
 
+    void OnTriggerStay(Collider other)
+    {
+        // Maintain the intangible material if two or more objects are still inside
+        if (objectCount >= 2)
+        {
+            objRenderer.material = intangibleMaterial;
+        }
+    }
+
+    // Called when another object exits the trigger
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("PuzzlePiece"))
-        {
-            objectCount--;
-            UpdateMaterial();
-        }
-    }
+        // Decrement object count when an object leaves the trigger
+        objectCount--;
 
-    // Updates material based on the object count
-    private void UpdateMaterial()
-    {
-        if (objectCount > 0)
+        // If fewer than two objects are inside, change back to the default material
+        if (objectCount < 2)
         {
-            SetMaterial(intangibleMaterial);
+            objRenderer.material = defaultMaterial;
         }
-        else
-        {
-            SetMaterial(defaultMaterial);
-        }
-    }
-
-    // Sets the material only if it differs from the current one
-    private void SetMaterial(Material newMaterial)
-    {
-        if (objRenderer.material != newMaterial)
-        {
-            objRenderer.material = newMaterial;
-        }
-    }
-
-    // Method to check the number of objects in the trigger zone
-    public int GetObjectCount()
-    {
-        return objectCount;
     }
 }

@@ -7,19 +7,18 @@ public class PuzzlePiece : MonoBehaviour
 {
     LeanSelectableByFinger selectable;
     Rigidbody rb;
-
     void Start()
     {
         selectable = GetComponent<LeanSelectableByFinger>();
-        rb = transform.GetComponent<Rigidbody>(); 
+        rb = transform.GetComponent<Rigidbody>();               //to transform it into a rigidbody
     }
 
     void Update()
     {
-        if (!selectable.IsSelected || BlockDetectionCajon.IsVictory) // Check for victory state
+        if (!selectable.IsSelected)
         {
-            rb.constraints = RigidbodyConstraints.FreezeAll; // Freeze all the axes
+            rb.constraints = RigidbodyConstraints.FreezeAll;    //Freeze all the axis, the piece stops moving inmediately
         }
     }
-}
 
+}
