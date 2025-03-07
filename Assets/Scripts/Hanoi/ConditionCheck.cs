@@ -63,7 +63,7 @@ public class ConditionCheck : MonoBehaviour
     public bool CheckHit()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 0.015f))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 0.0028f))
             return true;
         else
             return false;
