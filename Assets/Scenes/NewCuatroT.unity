@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5916,13 +5916,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 5013125d-a34c-4ab3-96c2-7705e6436384
+  mTrackableName: r
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/mucym.xml
-  mAspectRatio: 1.16279
+  mAspectRatio: 1.0147465
   mImageTargetType: 0
-  mWidth: 0.5
-  mHeight: 0.581395
+  mWidth: 0.3
+  mHeight: 0.304424
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -5960,7 +5960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1939463420}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 5013125d-a34c-4ab3-96c2-7705e6436384
+  mTargetName: r
   mDatasetName: Vuforia/mucym.xml
   mCastedBehaviour: {fileID: 1939463420}
   mMeshFilter: {fileID: 0}
