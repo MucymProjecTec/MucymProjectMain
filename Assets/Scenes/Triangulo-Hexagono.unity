@@ -2922,14 +2922,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: r
+  mTrackableName: ImageTarget
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/mucym.xml
-  mAspectRatio: 1.0147465
-  mImageTargetType: 0
-  mWidth: 0.3
-  mHeight: 0.304424
-  mRuntimeTexture: {fileID: 0}
+  mDataSetPath: Vuforia/MUCYM-Targets.xml
+  mAspectRatio: 1.1623932
+  mImageTargetType: 3
+  mWidth: 0.17205884
+  mHeight: 0.20000002
+  mRuntimeTexture: {fileID: 2800000, guid: f292e5c59079805478bf15d6eb527a0f, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -2969,8 +2969,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1193427296}
   mHiddenRoot: {fileID: 0}
-  mTargetName: r
-  mDatasetName: Vuforia/mucym.xml
+  mTargetName: ImageTarget
+  mDatasetName: Vuforia/MUCYM-Targets.xml
   mCastedBehaviour: {fileID: 1193427296}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
