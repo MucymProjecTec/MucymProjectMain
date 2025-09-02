@@ -2551,7 +2551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1705441073}
   mHiddenRoot: {fileID: 0}
-  mTargetName: r
+  mTargetName: caja
   mDatasetName: Vuforia/mucym.xml
   mCastedBehaviour: {fileID: 1705441073}
   mMeshFilter: {fileID: 0}
@@ -2615,13 +2615,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: r
+  mTrackableName: caja
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/mucym.xml
-  mAspectRatio: 1.0147465
+  mAspectRatio: 1
   mImageTargetType: 0
-  mWidth: 0.3
-  mHeight: 0.304424
+  mWidth: 0.5
+  mHeight: 0.5
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
